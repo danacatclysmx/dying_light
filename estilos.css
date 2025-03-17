@@ -108,55 +108,167 @@ body {
 }
 
 .inicio_pagina_contenido {
-  display: table;
-  width: 100%;
-  height: 100vh;
+  height: 100%;
+  max-width: unset;
+}
+
+.inicio_pagina_contenido_inner {
+  height: 100%;
+  padding-top: 185px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
 }
 
 .inicio_pagina_contenido_info {
-  width: 800px;
-  height: 400px;
-  display: table-cell;
-  flex-direction: column;
-  vertical-align: middle;
-  align-items:center;
-}
 
-.page-header__description {
-  font-family: 'Tahoma', sans-serif;;
-  color: white;
-  font-size: 16px;
-  text-align: center;
-  max-width: 550px;
+  box-sizing: border-box;
+  text-align: center; /* Centra el contenido interno */
 }
 
 .inicio_pagina_titulo {
   width: 440px;
-  
+  margin: 0 40px; /* Centra el contenedor horizontalmente */
+  padding-left: 20px; /* Agrega padding a la izquierda */
 }
 
 .inicio_pagina_titulo img {
-  display: block;
-  max-width: 389px;
+  display: block; /* Asegura que la imagen sea un bloque */
+  max-width: 100%; /* Ajusta el tamaño de la imagen al contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
 }
 
-.inicio_pagina_titulo_img {
-  max-inline-size: 100%;
-  max-block-size: 100%;
+.page-header__description_1{
+  font-family: 'Tahoma', sans-serif;
+  color: white;
+  font-size: 17px;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  max-width: 600px;
 }
 
-.div_Imagen_Inicio {
+.page-header__description_2{
+  font-family: 'Tahoma', sans-serif;
+  color: white;
+  font-size: 17px;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0%;
+  max-width: 600px;
+}
+
+.inicio_pagina_botones .t_btn {
+  font-size: 18px;
+  max-width: 250px;
+  padding-inline: 20px;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: end; /* Centra horizontalmente */
-  justify-content: center; /* Centra verticalmente */
-  height: 100vh; /* Altura completa de la ventana (opcional) */
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  position: relative;
+  border: none;
+  overflow: hidden;
+  color: transparent;
 }
 
-.Img_inicio {
-  width: auto;
-  height: 100vh;
+/* Estilos base del botón */
+.t_btn {
+  font-family: 'Gibson', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 14px 70px;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  transition: color 0.3s, background-color 0.3s;
 }
+
+/* Borde con SVG transparente */
+.btn--fancy {
+  position: relative;
+}
+
+/* Borde SVG que adopta el color del fondo */
+.btn--fancy::before {
+  content: '';
+  position: absolute;
+  inset: -5px; /* Ajusta el tamaño */
+  background-image: url('imgs/mega.svg'); /* Aplica el SVG como fondo */
+  background-repeat: no-repeat;
+  background-size: contain; /* Ajusta el tamaño del borde */
+  background-position: center;
+  z-index: 1;
+  pointer-events: none; /* Evita que interfiera con los clics */
+
+  /* Hace que el borde adopte el color del fondo */
+  mix-blend-mode: overlay; 
+  opacity: 0.8; /* Ajusta la transparencia */
+}
+
+/* Efecto Hover */
+.t_btn:hover {
+  color: white !important; /* Hace el texto blanco */
+  background-color: transparent;
+}
+
+.btn--fancy:hover::before {
+  opacity: 1; /* Hace el borde más visible al pasar el mouse */
+}
+
+/* Estilo del botón con efecto dorado */
+.btn--fancy-gold {
+  background: url(imgs/gold-button-bg.avif) 0 0 / cover no-repeat padding-box text;
+  background-clip: text;
+  color: transparent;
+}
+
+.btn--fancy-gold:hover {
+  color: white;
+  background-clip: border-box;
+}
+
+/* Ajustes generales */
+a {
+  transition: .3s;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+/* Medias queries optimizadas */
+@media only screen and (max-width: 1920px) {
+  .inicio_pagina_botones .t_btn {
+    max-width: 250px;
+  }
+}
+
+@media only screen and (max-width: 1299px) {
+  .inicio_pagina_botones .t_btn {
+    font-size: 16px;
+    max-width: 195px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .inicio_pagina_botones .t_btn {
+    font-size: 18px;
+    max-width: 250px;
+  }
+}
+
+
+
 
 
 /*   footer   */
