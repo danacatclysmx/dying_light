@@ -1,26 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="imgs/miniLogo.png">
-    <link rel="stylesheet" href="estilos.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="imgs/miniLogo.png" />
+    <link rel="stylesheet" href="estilos.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
 
     <title>Dying Light</title>
-</head>
-<body>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navBar">
+      <div class="navBar_contenedor">
+        <div class="nav_logo">
+          <a href="/" title="Dying Light - Sitio Oficial"
+            ><img
+              src="imgs/diying logo1.0.jpg"
+              alt="Dying Light - Sitio Oficial"
+          /></a>
+        </div>
+        <ul class="nav_list">
+          <li class="nav__li_item">
+            <a href="#" title="galeria">galeria</a>
+          </li>
+          <li class="nav__li_item">
+            <a href="#" title="sinopsis">sinopsis</a>
+          </li>
+          <li class="nav__li_item nav__li_item--selected">
+            <a href="#" title="infectados">infectados</a>
+          </li>
+          <li class="nav__li_item nav__li_item-comprar">
+            <a
+              href="#"
+              title="COMPRAR YA"
+              class="btn btn--medium btn--red gtmBtns"
+              data-gtm-type="buy"
+              data-gtm-place="menu"
+              >COMPRAR YA</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Inicio -->
 
-<!-- Navbar -->
-<!-- Inicio -->
- 
- <div id="Inicio_pagina" class="Inicio_pagina">
-    <div id="Imagen_Inicio" class="Imagen_Inicio">
-        <img src="imgs/plano_ciudad.jpg" alt="Imagen del protagonista con la ciudad de fondo">
+    <div id="Inicio_pagina" class="Inicio_pagina">
+      <div id="Imagen_Inicio" class="Imagen_Inicio">
+        <img
+          src="imgs/plano_ciudad.jpg"
+          alt="Imagen del protagonista con la ciudad de fondo"
+        />
+      </div>
     </div>
- </div>
-<!--carrusel-->
-<!--video-->
+    <!--carrusel-->
+    <!--video-->
 <!-- Footer -->
-</body>
+<footer class="footer bg-dark text-light py-3">
+    <div class="container">
+        <div class="row align-items-center text-center text-md-start">
+            <!-- Links -->
+            <div class="col-md-8 footer-links">
+                <a href="#" class="text-light">TECHLAND</a> &nbsp;|&nbsp;
+                <a href="#" class="text-light">SOPORTE</a> &nbsp;|&nbsp;
+                <a href="#" class="text-light">PROYECTOS DE LA UE</a> &nbsp;|&nbsp;
+                <a href="#" class="text-light">CONTACTO Y CENTRO DE PRENSA</a>
+            </div>
+
+            <!-- Imagen ESRB alineada a la derecha -->
+            <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                <img src="imgs/ESRB_Mature_17+.svg.png" alt="Clasificación ESRB" class="img-fluid" style="max-width: 80px;">
+            </div>
+        </div>
+
+        <!-- Línea separadora -->
+        <hr class="bg-light">
+
+        <!-- Parte inferior -->
+        <div class="text-center small">
+            ©2024 Techland S.A. Todos los derechos reservados. <br>
+            ©2025 David Bravo, Giseth Díaz, Dana Romero.
+        </div>
+
+        <!-- Enlaces de términos y privacidad -->
+        <div class="text-center mt-2 small">
+            <a href="#" class="text-light">Términos de servicio</a> &nbsp;|&nbsp;
+            <a href="#" class="text-light">Política de privacidad</a>
+        </div>
+    </div>
+</footer>
+
+  </body>
 </html>
