@@ -227,7 +227,6 @@ body {
 /* Fondo del botón con textura */
 .btn--fancy-gold {
   background: url("imgs/textura-hormigon-oscuro.avif") center / cover no-repeat;
-  
 }
 
 .btn--fancy-gold:hover {
@@ -274,11 +273,9 @@ button {
 }
 /*---------------------------------------------*/
 
-
 /*   footer   */
-  
-/*---------------------------------------------*/
 
+/*---------------------------------------------*/
 
 /*   footer   */
 .footer {
@@ -293,7 +290,7 @@ button {
   font-size: 14px;
 }
 .footer-links a:hover {
-  color: #b80505;
+  color: #c90a0a;
 }
 .footer-bottom {
   font-size: 12px;
