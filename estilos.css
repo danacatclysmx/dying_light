@@ -3,106 +3,106 @@ body {
 }
 /* NAVBAR PRINCIPAL */
 .navBar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 80px;
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo con opacidad */
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  }
-  
-  /* CONTENEDOR DEL NAVBAR */
-  .navBar_contenedor {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  /* LOGO */
-  .nav_logo img {
-    height: 60px;
-  }
-  
-  /* LISTA DE NAVEGACIÓN */
-  .nav_list {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-  
-  /* ELEMENTOS DEL MENÚ */
-  .nav__li_item a {
-    color: #fff;
-    text-decoration: none;
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 18px;
-    text-transform: uppercase;
-    padding: 10px;
-    transition: color 0.3s;
-  }
-  
-  /* EFECTO AL PASAR EL CURSOR */
-  .nav__li_item a:hover {
-    color: #e7333a;
-  }
-  
-  /* ELEMENTO SELECCIONADO */
-  .nav__li_item--selected a {
-    color: #ff0209;
-    font-weight: bold;
-  }
-  
-  /* BOTÓN DE COMPRA */
-  .nav__li_item-comprar a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(45deg, #a92719 50%, #7e1c12 50%);
-    color: #fff;
-    padding: 10px 30px;
-    font-size: 20px;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: bold;
-    position: relative;
-    border: 10px solid transparent;
-    border-image-source: url("imgs/borde_boton.svg");
-    border-image-slice: 20;
-    border-image-repeat: stretch;
-    transition: background 0.3s;
-  }
-  
-  /* MÁSCARA DE BORDE RASGADO */
-  .nav__li_item-comprar a::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    -webkit-mask: url("imgs/borde_boton.svg") no-repeat center/100% 100%;
-    mask: url("imgs/borde_boton.svg") no-repeat center/100% 100%;
-    background: linear-gradient(45deg, #a92719 50%, #7e1c12 50%);
-    transition: background-position 0.5s;
-  }
-  
-  /*  EFECTO HOVER - OSCURECER ROJO */
-  .nav__li_item-comprar a:hover::before {
-    background-position: 100% 0;
-  }
-  
-  .nav__li_item-comprar a:hover {
-    background-color: #b70000;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo con opacidad */
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* CONTENEDOR DEL NAVBAR */
+.navBar_contenedor {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LOGO */
+.nav_logo img {
+  height: 60px;
+}
+
+/* LISTA DE NAVEGACIÓN */
+.nav_list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* ELEMENTOS DEL MENÚ */
+.nav__li_item a {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+/* EFECTO AL PASAR EL CURSOR */
+.nav__li_item a:hover {
+  color: #e7333a;
+}
+
+/* ELEMENTO SELECCIONADO */
+.nav__li_item--selected a {
+  color: #ff0209;
+  font-weight: bold;
+}
+
+/* BOTÓN DE COMPRA */
+.nav__li_item-comprar a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, #a92719 50%, #7e1c12 50%);
+  color: #fff;
+  padding: 10px 30px;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  border: 10px solid transparent;
+  border-image-source: url("imgs/borde_boton.svg");
+  border-image-slice: 20;
+  border-image-repeat: stretch;
+  transition: background 0.3s;
+}
+
+/* MÁSCARA DE BORDE RASGADO */
+.nav__li_item-comprar a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  -webkit-mask: url("imgs/borde_boton.svg") no-repeat center/100% 100%;
+  mask: url("imgs/borde_boton.svg") no-repeat center/100% 100%;
+  background: linear-gradient(45deg, #a92719 50%, #7e1c12 50%);
+  transition: background-position 0.5s;
+}
+
+/*  EFECTO HOVER - OSCURECER ROJO */
+.nav__li_item-comprar a:hover::before {
+  background-position: 100% 0;
+}
+
+.nav__li_item-comprar a:hover {
+  background-color: #b70000;
+}
 
 /*   inicio   */
 .Inicio_pagina {
-  background: url('imgs/plano_ciudad.jpg') no-repeat center center;
+  background: url("imgs/plano_ciudad.jpg") no-repeat center center;
   background-size: 1550px 800px; /* Tamaño fijo */
   height: 100vh;
 }
@@ -122,7 +122,6 @@ body {
 }
 
 .inicio_pagina_contenido_info {
-
   box-sizing: border-box;
   text-align: center; /* Centra el contenido interno */
 }
@@ -139,8 +138,8 @@ body {
   height: auto; /* Mantiene la proporción de la imagen */
 }
 
-.page-header__description_1{
-  font-family: 'Tahoma', sans-serif;
+.page-header__description_1 {
+  font-family: "Tahoma", sans-serif;
   color: white;
   font-size: 17px;
   text-align: center;
@@ -149,8 +148,8 @@ body {
   max-width: 600px;
 }
 
-.page-header__description_2{
-  font-family: 'Tahoma', sans-serif;
+.page-header__description_2 {
+  font-family: "Tahoma", sans-serif;
   color: white;
   font-size: 17px;
   text-align: center;
@@ -176,7 +175,7 @@ body {
 
 /* Estilos base del botón */
 .t_btn {
-  font-family: 'Gibson', sans-serif;
+  font-family: "Gibson", sans-serif;
   font-weight: 500;
   font-size: 20px;
   line-height: 28px;
@@ -196,19 +195,16 @@ body {
 
 /* Borde SVG que adopta el color del fondo */
 .btn--fancy::before {
-  content: '';
+  content: "";
   position: absolute;
-  inset: -5px; /* Ajusta el tamaño */
-  background-image: url('imgs/mega.svg'); /* Aplica el SVG como fondo */
+  inset: 0; /* Ajusta el tamaño al botón */
+  background-image: url("imgs/mega.svg");
   background-repeat: no-repeat;
-  background-size: contain; /* Ajusta el tamaño del borde */
+  background-size: 100% 100%; /* Se ajusta al tamaño del botón */
   background-position: center;
-  z-index: 1;
-  pointer-events: none; /* Evita que interfiera con los clics */
-
-  /* Hace que el borde adopte el color del fondo */
-  mix-blend-mode: overlay; 
-  opacity: 0.8; /* Ajusta la transparencia */
+  -webkit-mask-image: url("imgs/mega.svg");
+  mask-image: url("imgs/mega.svg");
+  background-color: #ffab00; /* Aplica el color */
 }
 
 /* Efecto Hover */
@@ -223,7 +219,8 @@ body {
 
 /* Estilo del botón con efecto dorado */
 .btn--fancy-gold {
-  background: url(imgs/gold-button-bg.avif) 0 0 / cover no-repeat padding-box text;
+  background: url(imgs/gold-button-bg.avif) 0 0 / cover no-repeat padding-box
+    text;
   background-clip: text;
   color: transparent;
 }
@@ -235,14 +232,17 @@ body {
 
 /* Ajustes generales */
 a {
-  transition: .3s;
+  transition: 0.3s;
 }
 
-a, button {
+a,
+button {
   cursor: pointer;
 }
 
-*, ::after, ::before {
+*,
+::after,
+::before {
   box-sizing: border-box;
 }
 
@@ -267,29 +267,25 @@ a, button {
   }
 }
 
-
-
-
-
 /*   footer   */
-  .footer {
-    background-color: #111; /* Negro oscuro */
-    color: #fff;
-    padding: 20px 0;
+.footer {
+  background-color: #111; /* Negro oscuro */
+  color: #fff;
+  padding: 20px 0;
 }
 .footer-links a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
 }
 .footer-links a:hover {
-    color: #b80505;
+  color: #b80505;
 }
 .footer-bottom {
-    font-size: 12px;
-    color: #bbb;
+  font-size: 12px;
+  color: #bbb;
 }
 .footer-right img {
-    height: 50px;
+  height: 50px;
 }
