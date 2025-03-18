@@ -127,9 +127,8 @@ body {
 }
 
 .inicio_pagina_titulo {
-  width: 440px;
-  margin: 0 40px; /* Centra el contenedor horizontalmente */
-  padding-left: 20px; /* Agrega padding a la izquierda */
+  max-width: 600px;
+  width: 100%;
 }
 
 .inicio_pagina_titulo img {
@@ -143,7 +142,7 @@ body {
   color: white;
   font-size: 17px;
   text-align: center;
-  margin-top: 5px;
+  margin-top: 10px;
   margin-bottom: 0px;
   max-width: 600px;
 }
@@ -154,7 +153,15 @@ body {
   font-size: 17px;
   text-align: center;
   margin-top: 0px;
-  margin-bottom: 0%;
+  margin-bottom: 10px;
+  max-width: 600px;
+}
+
+.inicio_pagina_botones {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  text-align: center; /* Asegura que el contenido se centre si es inline */
   max-width: 600px;
 }
 
@@ -170,13 +177,13 @@ body {
   position: relative;
   border: none;
   overflow: hidden;
-  color: transparent;
+  color: #ffab00;
 }
 
 /* Estilos base del botón */
 .t_btn {
   font-family: "Gibson", sans-serif;
-  font-weight: 500;
+  font-weight: 500px;
   font-size: 20px;
   line-height: 28px;
   text-transform: uppercase;
@@ -198,12 +205,12 @@ body {
   content: "";
   position: absolute;
   inset: 0; /* Ajusta el tamaño al botón */
-  background-image: url("imgs/mega.svg");
+  background-image: url("imgs/mega1.svg");
   background-repeat: no-repeat;
-  background-size: 100% 100%; /* Se ajusta al tamaño del botón */
+  background-size: contain; /* Ajusta el tamaño del borde */
   background-position: center;
-  -webkit-mask-image: url("imgs/mega.svg");
-  mask-image: url("imgs/mega.svg");
+  -webkit-mask-image: url("imgs/mega1.svg");
+  mask-image: url("imgs/mega1.svg");
   background-color: #ffab00; /* Aplica el color */
 }
 
@@ -217,12 +224,10 @@ body {
   opacity: 1; /* Hace el borde más visible al pasar el mouse */
 }
 
-/* Estilo del botón con efecto dorado */
+/* Fondo del botón con textura */
 .btn--fancy-gold {
-  background: url(imgs/gold-button-bg.avif) 0 0 / cover no-repeat padding-box
-    text;
-  background-clip: text;
-  color: transparent;
+  background: url("imgs/textura-hormigon-oscuro.avif") center / cover no-repeat;
+  
 }
 
 .btn--fancy-gold:hover {
@@ -249,7 +254,8 @@ button {
 /* Medias queries optimizadas */
 @media only screen and (max-width: 1920px) {
   .inicio_pagina_botones .t_btn {
-    max-width: 250px;
+    margin-top: 20px;
+    max-width: 251px;
   }
 }
 
@@ -266,6 +272,13 @@ button {
     max-width: 250px;
   }
 }
+/*---------------------------------------------*/
+
+
+/*   footer   */
+  
+/*---------------------------------------------*/
+
 
 /*   footer   */
 .footer {
