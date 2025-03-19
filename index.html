@@ -12,217 +12,158 @@
     <!-- Navbar -->
     <nav class="navBar">
       <div class="navBar_contenedor">
-        <div class="menu_hamburguesa"></div>
-        <div class="nav_logo">
-          <a href="#" title="Dying Light - Sitio Oficial"
-            ><img
-              src="imgs/diying_logo1.0.png"
-              alt="Dying Light - Sitio Oficial"
-          /></a>
-        </div>
-        <ul class="nav_list">
+          <label class="burger" for="burger">
+              <input type="checkbox" id="burger" onclick="toggleMenu()">
+              <span></span>
+              <span></span>
+              <span></span>
+          </label>
+          <div class="nav_logo">
+              <a href="#" title="Dying Light - Sitio Oficial">
+                  <img src="imgs/diying_logo1.0.png" alt="Dying Light - Sitio Oficial" />
+              </a>
+          </div>
+      </div>
+      <ul class="nav_list" id="menu">
           <li class="nav__li_item">
-            <a href="#" title="galeria">me falta arregla el nav bar y poner imagenes</a>
+              <a href="#" title="galeria">Galería</a>
           </li>
           <li class="nav__li_item">
-            <a href="#" title="sinopsis">sinopsis</a>
+              <a href="#" title="sinopsis">Sinopsis</a>
           </li>
           <li class="nav__li_item nav__li_item--selected">
-            <a href="#" title="infectados">infectados</a>
+              <a href="#" title="infectados">Infectados</a>
           </li>
-          <li class="nav__li_item nav__li_item-comprar">
-            <a
-              href="#"
-              title="COMPRAR YA"
-              class="btn btn--medium btn--red gtmBtns"
-              data-gtm-type="buy"
-              data-gtm-place="menu"
-              >COMPRAR YA</a
-            >
-          </li>
-        </ul>
-      </div>
-    </nav>
+      </ul>
+  </nav>
+  <div class="menu_overlay" id="overlay" onclick="closeMenu()"></div>
 
-    <!-- Inicio -->
-    <header id="Inicio_pagina" class="Inicio_pagina">
-        <div class="inicio_pagina_contenido">
-            <div class="inicio_pagina_contenido_inner">
-                <div class="inicio_pagina_contenido_info ">
-                    <h1 class="inicio_pagina_titulo">
-                        <img class="rounded mx-auto d-block" src="imgs/Logo10años.png" alt="">
-                    </h1>
-                    <p  class="page-header__description_1">¡Todo el contenido de los últimos 10 años, todos los DLC, en un paquete!</p>
-                    <p class="page-header__description_2">¡¡¡COMPRALO YA!!!</p>
-                    <div class="inicio_pagina_botones">
-                        <a href="https://www.youtube.com/watch?v=JnI4Dt5G30Q" title="Dying Light Trailer" data-vid="3zeUJaGxe14" class="popYT t_btn btn--fancy btn--fancy-gold" target="_blank" data-gtm-place="intro">
-                            VER EL TRAILER    
-                        </a>
-                    </div>
-                </div>
-                <div class="Img_sobresalinete">
-                  <img src="imgs/Personaje_principal.png" alt="">
+
+  <!-- Inicio -->
+  <header id="Inicio_pagina" class="Inicio_pagina">
+    <div class="inicio_pagina_contenido" id="Inicio">
+        <div class="inicio_pagina_contenido_inner" >
+            <div class="inicio_pagina_contenido_info">
+                <h1 class="inicio_pagina_titulo">
+                    <img class="rounded mx-auto d-block" src="imgs/Logo10años.png" alt="Logo del la edicion 10 años de Dying Light">
+                </h1>
+                <p  class="page-header__description_1">¡Todo el contenido de los últimos 10 años, todos los DLC, en un paquete!</p>
+                <p class="page-header__description_2">¡¡¡COMPRALO YA!!!</p>
+                <div class="inicio_pagina_botones">
+                    <a href="https://www.youtube.com/watch?v=JnI4Dt5G30Q" title="Dying Light Trailer" data-vid="3zeUJaGxe14" class="popYT t_btn btn--fancy btn--fancy-gold" target="_blank" data-gtm-place="intro">
+                        VER EL TRAILER    
+                    </a>
                 </div>
             </div>
-        </div>
-    </header>
-
-    <!-- Carrusel -->
-    <!-- Video -->
-    <div class="contenedor-video">
-      <video class="video" autoplay loop muted>
-          <source src="Dying Light — 10 Years in Numbers.mp4" type="video/mp4">
-          Tu navegador no soporta el video.
-      </video>
-      <img class="marco" src="imgs/Marco_Videop-remove.png" alt="Marco del video">
-    </div>
-
-    <!-- Sinopsis -->
-    <div class="Sinopsis_seccion">
-      <div class="contenedor_sinopsis">
-        <div class="Sinopsis_content">
-          <h1 class="titulo_sinopsis"><strong> SINOPSIS </strong></h1>
-          <p class="texto_sinopsis1">
-            En un mundo devastado por una infección viral, la ciudad de Harran ha sido puesta en cuarentena, convirtiéndose en un campo de batalla entre los supervivientes y hordas de infectados sedientos de sangre. Kyle Crane, un agente encubierto de la GRE (Global Relief Effort), es enviado a la ciudad con la misión de recuperar un documento crucial que podría determinar el destino de la humanidad.
-          </p>
-          <p class="texto_sinopsis2">
-            Sin embargo, al adentrarse en Harran, Crane se encuentra atrapado entre la lucha por la supervivencia de los habitantes y los oscuros secretos de su propia organización. Mientras busca cumplir su misión, se ve obligado a tomar decisiones que pondrán a prueba su moralidad y su lealtad.
-          </p>
-          <p class="texto_sinopsis3">
-            Con mecánicas de parkour, un combate brutal y un ciclo dinámico de día y noche donde los infectados se vuelven más agresivos en la oscuridad, Dying Light ofrece una intensa experiencia de supervivencia en un mundo abierto lleno de peligros.
-          </p>
-        </div>
-      </div>
-      <div class="Sinopisis_imagen">
-        <img src="imgs/rais.webp" alt="">
-      </div>
-    </div>
-
-    <!-- Formulario Reporte de Zombis -->
-    <section id="reporte" class="seccion-formulario">
-      <div class="container">
-        <div class="modo-toggle text-center mb-4">
-          <button id="modoBtn" class="btn btn-dark">🌙 Modo Noche</button>
-        </div>
-        <div class="reporte-form mx-auto">
-          <h2 class="text-center"><i class="fa-solid fa-biohazard"></i> Reporte de Zombis o Bugs</h2>
-          <form id="reporteForm">
-            <div class="mb-3">
-              <label for="nombre" class="form-label">Nombre de Superviviente:</label>
-              <input type="text" id="nombre" class="form-control" placeholder="Tu nombre en la zona segura..." required>
-            </div>
-            <div class="mb-3">
-              <label for="tipo" class="form-label">Tipo de Reporte:</label>
-              <select id="tipo" class="form-select" required>
-                <option value="">Selecciona una opción...</option>
-                <option value="zombi">Avistamiento de Zombi</option>
-                <option value="bug">Error del Sistema</option>
-              </select>
-            </div>
-            <div class="mb-3">
-              <label for="descripcion" class="form-label">Descripción:</label>
-              <textarea id="descripcion" class="form-control" rows="3" placeholder="Describe lo que viste o el error..." required></textarea>
-            </div>
-            <div class="mb-3">
-              <label for="archivo" class="form-label">Adjuntar Evidencia (Opcional):</label>
-              <input type="file" id="archivo" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-danger w-100"><i class="fa-solid fa-satellite-dish"></i> Enviar Reporte</button>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer bg-dark text-light py-3">
-      <div class="container">
-        <div class="row align-items-center text-center text-md-start">
-          <!-- Links -->
-          <div class="col-md-8 footer-links">
-            <a href="https://techland.net/" class="text-light">TECHLAND</a> &nbsp;|&nbsp;
-            <a href="#" class="text-light">SOPORTE</a> &nbsp;|&nbsp;
-            <a href="#" class="text-light">PROYECTOS DE LA UE</a> &nbsp;|&nbsp;
-            <a href="#" class="text-light">CONTACTO Y CENTRO DE PRENSA</a>
-          </div>
-          <!-- Imagen ESRB alineada a la derecha -->
-          <div class="col-md-4 text-md-end mt-3 mt-md-0">
-            <img src="imgs/ESRB_Mature_17+.svg.png" alt="Clasificación ESRB" class="img-fluid" style="max-width: 80px;">
+            <div class="Img_sobresalinete">
+              <img src="imgs/Personaje_principal.png" id="crane" alt="Protagonista del juego, Crane" data-depth="0.2">
           </div>
         </div>
-        <!-- Línea separadora -->
-        <hr class="bg-light">
-        <!-- Parte inferior -->
-        <div class="text-center small">
-          ©2024 Techland S.A. Todos los derechos reservados. <br>
-          ©2025 David Bravo, Giseth Díaz, Dana Romero.
+    </div>
+  </header>
+
+  <!-- Carrusel -->
+  <!-- Video -->
+  <div class="contenedor-video">
+    <video class="video" autoplay loop muted>
+        <source src="Dying Light — 10 Years in Numbers.mp4" type="video/mp4">
+        Tu navegador no soporta el video.
+    </video>
+    <img class="marco" src="imgs/Marco_Videop-remove.png" alt="Marco del video">
+  </div>
+
+  <!-- Sinopsis -->
+  <div class="Sinopsis_seccion">
+    <div class="contenedor_sinopsis">
+      <div class="Sinopsis_content">
+        <h1 class="titulo_sinopsis"><strong> SINOPSIS </strong></h1>
+        <p class="texto_sinopsis1">
+          En un mundo devastado por una infección viral, la ciudad de Harran ha sido puesta en cuarentena, convirtiéndose en un campo de batalla entre los supervivientes y hordas de infectados sedientos de sangre. Kyle Crane, un agente encubierto de la GRE (Global Relief Effort), es enviado a la ciudad con la misión de recuperar un documento crucial que podría determinar el destino de la humanidad.
+        </p>
+        <p class="texto_sinopsis2">
+          Sin embargo, al adentrarse en Harran, Crane se encuentra atrapado entre la lucha por la supervivencia de los habitantes y los oscuros secretos de su propia organización. Mientras busca cumplir su misión, se ve obligado a tomar decisiones que pondrán a prueba su moralidad y su lealtad.
+        </p>
+        <p class="texto_sinopsis3">
+          Con mecánicas de parkour, un combate brutal y un ciclo dinámico de día y noche donde los infectados se vuelven más agresivos en la oscuridad, Dying Light ofrece una intensa experiencia de supervivencia en un mundo abierto lleno de peligros.
+        </p>
+      </div>
+    </div>
+    <div class="Sinopisis_imagen">
+      <img src="imgs/rais.webp" id="rais" alt="Imagen del antagonista Principal del juego, Rais">
+    </div>
+  </div>
+
+  <!-- Formulario Reporte de Zombis -->
+  <section id="reporte" class="seccion-formulario">
+    <div class="container">
+      <div class="modo-toggle text-center mb-4">
+        <button id="modoBtn" class="btn btn-dark">🌙 Modo Noche</button>
+      </div>
+      <div class="reporte-form mx-auto">
+        <h2 class="text-center"><i class="fa-solid fa-biohazard"></i> Reporte de Zombis o Bugs</h2>
+        <form id="reporteForm">
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre de Superviviente:</label>
+            <input type="text" id="nombre" class="form-control" placeholder="Tu nombre en la zona segura..." required>
+          </div>
+          <div class="mb-3">
+            <label for="tipo" class="form-label">Tipo de Reporte:</label>
+            <select id="tipo" class="form-select" required>
+              <option value="">Selecciona una opción...</option>
+              <option value="zombi">Avistamiento de Zombi</option>
+              <option value="bug">Error del Sistema</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="descripcion" class="form-label">Descripción:</label>
+            <textarea id="descripcion" class="form-control" rows="3" placeholder="Describe lo que viste o el error..." required></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="archivo" class="form-label">Adjuntar Evidencia (Opcional):</label>
+            <input type="file" id="archivo" class="form-control">
+          </div>
+          <button type="submit" class="btn btn-danger w-100"><i class="fa-solid fa-satellite-dish"></i> Enviar Reporte</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-dark text-light py-3">
+    <div class="container">
+      <div class="row align-items-center text-center text-md-start">
+        <!-- Links -->
+        <div class="col-md-8 footer-links">
+          <a href="https://techland.net/" class="text-light">TECHLAND</a> &nbsp;|&nbsp;
+          <a href="#" class="text-light">SOPORTE</a> &nbsp;|&nbsp;
+          <a href="#" class="text-light">PROYECTOS DE LA UE</a> &nbsp;|&nbsp;
+          <a href="#" class="text-light">CONTACTO Y CENTRO DE PRENSA</a>
         </div>
-        <!-- Enlaces de términos y privacidad -->
-        <div class="text-center mt-2 small">
-          <a href="#" class="text-light">Términos de servicio</a> &nbsp;|&nbsp;
-          <a href="#" class="text-light">Política de privacidad</a>
+        <!-- Imagen ESRB alineada a la derecha -->
+        <div class="col-md-4 text-md-end mt-3 mt-md-0">
+          <img src="imgs/ESRB_Mature_17+.svg.png" alt="Clasificación ESRB" class="img-fluid" style="max-width: 80px;">
         </div>
       </div>
-    </footer>
+      <!-- Línea separadora -->
+      <hr class="bg-light">
+      <!-- Parte inferior -->
+      <div class="text-center small">
+        ©2024 Techland S.A. Todos los derechos reservados. <br>
+        ©2025 David Bravo, Giseth Díaz, Dana Romero.
+      </div>
+      <!-- Enlaces de términos y privacidad -->
+      <div class="text-center mt-2 small">
+        <a href="#" class="text-light">Términos de servicio</a> &nbsp;|&nbsp;
+        <a href="#" class="text-light">Política de privacidad</a>
+      </div>
+    </div>
+  </footer>
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const formulario = document.getElementById("reporteForm");
-        const modoBtn = document.getElementById("modoBtn");
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
 
-        // Alternar modo Día/Noche
-        modoBtn.addEventListener("click", function () {
-          document.body.classList.toggle("noche");
-
-          if (document.body.classList.contains("noche")) {
-            modoBtn.innerHTML = "☀️ Modo Día";
-            modoBtn.classList.remove("btn-dark");
-            modoBtn.classList.add("btn-light");
-          } else {
-            modoBtn.innerHTML = "🌙 Modo Noche";
-            modoBtn.classList.remove("btn-light");
-            modoBtn.classList.add("btn-dark");
-          }
-        });
-
-        // Manejar envío del formulario
-        formulario.addEventListener("submit", function (event) {
-          event.preventDefault();
-
-          // Obtener valores
-          const nombre = document.getElementById("nombre").value;
-          const tipo = document.getElementById("tipo").value;
-          const descripcion = document.getElementById("descripcion").value;
-
-          // Validación básica
-          if (nombre.trim() === "" || tipo.trim() === "" || descripcion.trim() === "") {
-            alert("Completa todos los campos obligatorios.");
-            return;
-          }
-
-          // Simulación de envío con animación
-          formulario.innerHTML = `
-            <div class="text-center">
-              <h3>📡 Enviando Reporte...</h3>
-              <p>Conectando con la Torre de Radio...</p>
-              <div class="spinner-border text-danger" role="status"></div>
-            </div>
-          `;
-
-          setTimeout(() => {
-            formulario.innerHTML = `
-              <div class="text-center">
-                <h3>✅ Reporte Enviado</h3>
-                <p>Gracias, superviviente ${nombre}. Tu información ha sido enviada.</p>
-                <button onclick="location.reload()" class="btn btn-warning">Enviar Otro Reporte</button>
-              </div>
-            `;
-          }, 3000);
-        });
-      });
-    </script>
-  </body>
+</body>
 </html>

@@ -1,6 +1,10 @@
 body {
   background-color: black;
+  overflow-x: hidden; /* Evita que la página se desplace a la derecha */
+  margin: 0; /* Asegura que no haya márgenes que causen desplazamiento */
+  padding: 0;
 }
+
 /* NAVBAR PRINCIPAL */
 .navBar {
   position: fixed;
@@ -17,23 +21,111 @@ body {
 
 /* CONTENEDOR DEL NAVBAR */
 .navBar_contenedor {
-  width: 100vw;
-  margin: 0 20px;
+  width: 100%;
+  padding: 0 20px;
   display: flex;
-
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
 }
 
 /* LOGO */
+.nav_logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .nav_logo img {
   height: 80px;
 }
 
-/* LISTA DE NAVEGACIÓN */
+/* Botón hamburguesa animado */
+/* Botón hamburguesa animado */
+.burger {
+  position: relative;
+  width: 30px;
+  height: 25px;
+  background: transparent;
+  cursor: pointer;
+  display: block;
+  z-index: 11;
+}
+
+.burger input {
+  display: none;
+}
+
+.burger span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: white;
+  border-radius: 9px;
+  transition: .25s ease-in-out;
+}
+
+/* Posición inicial de las líneas */
+.burger span:nth-of-type(1) {
+  top: 0;
+}
+
+.burger span:nth-of-type(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.burger span:nth-of-type(3) {
+  bottom: 0;
+}
+
+/* Efecto de "X" cuando el menú está activo */
+.burger input:checked ~ span:nth-of-type(1) {
+  transform: rotate(45deg);
+  top: 50%;
+}
+
+.burger input:checked ~ span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.burger input:checked ~ span:nth-of-type(3) {
+  transform: rotate(-45deg);
+  top: 50%;
+}
+
+
+/* Estilos del menú */
 .nav_list {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
   list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 20px;
+  padding-top: 80px;
+  transition: left 0.3s;
+  z-index: 10;
+}
+
+.nav_list.active {
+  left: 0;
+}
+
+.menu_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 9;
+}
+
+.menu_overlay.active {
+  display: block;
 }
 
 /* ELEMENTOS DEL MENÚ */
@@ -49,12 +141,12 @@ body {
 
 /* EFECTO AL PASAR EL CURSOR */
 .nav__li_item a:hover {
-  color: #e7333a;
+  color: #ffab00;
 }
 
 /* ELEMENTO SELECCIONADO */
 .nav__li_item--selected a {
-  color: #ff0209;
+  color: #ffab00;
   font-weight: bold;
 }
 
@@ -350,8 +442,8 @@ button {
 }
 
 .Sinopisis_imagen {
-  position: absolute; /* Se coloca sobre el contenido */
 
+  position: absolute; /* Se coloca sobre el contenido */
   right: 0; /* Se alinea a la derecha */
   z-index: 2; /* Se asegura de que esté por encima de todo */
   display: flex;
@@ -359,6 +451,7 @@ button {
 }
 
 .Sinopisis_imagen img {
+  padding-right: 60px;
   height: 100vh; /* Ocupa toda la altura de la pantalla */
 }
 /*---------------------------------------------*/
@@ -369,7 +462,7 @@ button {
 /* Contenedor */
 .contenedor-video {
   position: relative;
-  width: 100vw; /* Ocupa todo el ancho de la pantalla */
+  width: auto; /* Ocupa todo el ancho de la pantalla */
   height: 100vh; /* Ocupa todo el alto de la pantalla */
   display: flex;
   justify-content: center;
