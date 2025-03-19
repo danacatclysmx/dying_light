@@ -17,17 +17,15 @@ body {
 
 /* CONTENEDOR DEL NAVBAR */
 .navBar_contenedor {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100vw;
+  margin: 0 20px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+
 }
 
 /* LOGO */
 .nav_logo img {
-  height: 60px;
+  height: 80px;
 }
 
 /* LISTA DE NAVEGACIÓN */
@@ -118,12 +116,13 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 
 .inicio_pagina_contenido_info {
   box-sizing: border-box;
   text-align: center; /* Centra el contenido interno */
+  z-index: 2;
 }
 
 .inicio_pagina_titulo {
@@ -140,7 +139,7 @@ body {
 .page-header__description_1 {
   font-family: "Tahoma", sans-serif;
   color: white;
-  font-size: 17px;
+  font-size: 16px;
   text-align: center;
   margin-top: 10px;
   margin-bottom: 0px;
@@ -148,9 +147,9 @@ body {
 }
 
 .page-header__description_2 {
-  font-family: "Tahoma", sans-serif;
+  font-family: 'BlackOpsOne', sans-serif;
   color: white;
-  font-size: 17px;
+  font-size: 18px;
   text-align: center;
   margin-top: 0px;
   margin-bottom: 10px;
@@ -182,9 +181,9 @@ body {
 
 /* Estilos base del botón */
 .t_btn {
-  font-family: "Gibson", sans-serif;
+  font-family: "LastDays", sans-serif;
   font-weight: 500px;
-  font-size: 20px;
+  font-size: 17px;
   line-height: 28px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -271,9 +270,106 @@ button {
     max-width: 250px;
   }
 }
+
+@font-face {
+  font-family: 'Tahoma';
+  src: url('fonts/tahoma.ttf') format('truetype');
+}
+
+.Img_sobresalinete {
+  position: absolute; /* Se coloca sobre el contenido */
+  top: 0; /* Se va al inicio de la pantalla */
+  right: 0; /* Se alinea a la derecha */
+  z-index: 9999; /* Se asegura de que esté por encima de todo */
+  display: flex;
+  justify-content: flex-end; /* Asegura que la imagen se alinee al final del contenedor */
+}
+
+.Img_sobresalinete img {
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+}
+
 /*---------------------------------------------*/
 /*  sinopsis  */
+.Sinopsis_seccion {
+  height: 100vh;
+  background: url(imgs/fondo_sinopsis.jpg) no-repeat center center fixed;
+  display: flex; /* Usa flexbox */
+  justify-content: space-between; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente si es necesario */
+}
 
+.contenedor_sinopsis {
+  background: url(imgs/prueba4.webp) no-repeat center center;
+  width: 800px;
+  display: flex;
+  flex-direction: column; /* Asegura que los elementos internos se apilen verticalmente */
+  align-items: center; /* Centra el contenido horizontalmente */
+  padding: 20px;
+  margin: 0 200px;
+}
+
+.Sinopsis_content {
+  width: 600px;
+  text-align: justify;
+  display: flex;
+  flex-direction: column; /* Organiza los textos en columna */
+  align-items: center; /* Centra horizontalmente el texto */
+}
+
+@font-face {
+  font-family: '28DaysLater';
+  src: url('fonts/28\ Days\ Later.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'LastDays';
+  src: url('fonts/Last\ Days.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'BlackOpsOne';
+  src: url('fonts/BlackOpsOne-Regular.ttf') format('truetype');
+}
+
+.titulo_sinopsis {
+  font-family: '28DaysLater', sans-serif;
+  font-size: 38px; /* Ajusta el tamaño según necesites */
+  line-height: 20px;
+  padding-bottom: 10px;
+  --color: #fff; /* Cambia el color si lo necesitas */
+}
+
+.texto_sinopsis1 {
+  font-family: '28DaysLater', sans-serif;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.texto_sinopsis2 {
+  font-family: '28DaysLater', sans-serif;
+  font-size: 20px;
+  line-height: 20px;  
+}
+
+.texto_sinopsis3 {
+  font-family: '28DaysLater', sans-serif;
+  font-size: 20px;
+  line-height: 20px;  
+}
+
+.Sinopisis_imagen {
+  position: absolute; /* Se coloca sobre el contenido */
+
+  right: 0; /* Se alinea a la derecha */
+  z-index: 2; /* Se asegura de que esté por encima de todo */
+  display: flex;
+  justify-content: flex-end; /* Asegura que la imagen se alinee al final del contenedor */
+}
+
+.Sinopisis_imagen img {
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+}
 /*---------------------------------------------*/
 /*  carrusel  */
 
