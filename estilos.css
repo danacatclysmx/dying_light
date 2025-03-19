@@ -340,22 +340,13 @@ button {
   --color: #fff; /* Cambia el color si lo necesitas */
 }
 
-.texto_sinopsis1 {
-  font-family: '28DaysLater', sans-serif;
-  font-size: 20px;
-  line-height: 20px;
-}
-
-.texto_sinopsis2 {
-  font-family: '28DaysLater', sans-serif;
-  font-size: 20px;
-  line-height: 20px;  
-}
-
+.texto_sinopsis1,
+.texto_sinopsis2,
 .texto_sinopsis3 {
   font-family: '28DaysLater', sans-serif;
   font-size: 20px;
-  line-height: 20px;  
+  line-height: 20px;
+  color: #000000; /* Cambia el color aquí (ejemplo: blanco) */
 }
 
 .Sinopisis_imagen {
@@ -405,27 +396,155 @@ button {
 /*---------------------------------------------*/
 /*  Galeria  */
 
+
+
+/*---------------------------------------------*/
+/*  Formulario */
+
+/* Modo día - Texto blanco en el formulario */
+.reporte-form {
+  color: #fff; /* Texto blanco por defecto (modo día) */
+}
+/* Modo noche */
+.noche {
+  background-color: #121212; /* Fondo oscuro */
+  color: #fff; /* Texto blanco */
+}
+
+/* Sección del formulario */
+.seccion-formulario {
+  padding: 40px 0;
+  background: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
+}
+
+/* Contenedor del formulario */
+.reporte-form {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 69, 0, 0.8);
+  border: 2px solid rgba(255, 69, 0, 0.8);
+  backdrop-filter: blur(5px);
+  max-width: 500px;
+  margin: auto;
+}
+
+/* Título del formulario */
+.reporte-form h2 {
+  text-align: center;
+  font-family: 'BlackOpsOne', sans-serif;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Inputs y select */
+.reporte-form input,
+.reporte-form select,
+.reporte-form textarea {
+  background-color: rgba(255, 255, 255, 0.815);
+  border: none;
+  border-radius: 5px;
+  color: #000000;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 15px;
+  transition: background-color 0.3s;
+}
+
+/* Efecto hover en inputs */
+.reporte-form input:focus,
+.reporte-form select:focus,
+.reporte-form textarea:focus {
+  background-color: rgba(245, 221, 221, 0.336);
+  outline: none;
+}
+
+/* Botón de envío */
+.reporte-form button {
+  background: linear-gradient(45deg, #a92719 50%, #7e1c12 50%);
+  color: #fff;
+  padding: 10px;
+  font-size: 18px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+/* Efecto hover en el botón */
+.reporte-form button:hover {
+  background: linear-gradient(45deg, #b70000 50%, #9e0000 50%);
+}
+
+/* Botón de modo día/noche */
+.modo-toggle .btn {
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .reporte-form {
+    padding: 15px;
+  }
+
+  .reporte-form h2 {
+    font-size: 20px;
+  }
+
+  .reporte-form input,
+  .reporte-form select,
+  .reporte-form textarea {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
 /*---------------------------------------------*/
 
-/*   footer   */
+/* Estilo general del footer */
 .footer {
   background-color: #111; /* Negro oscuro */
-  color: #fff;
-  padding: 20px 0;
+  color: #fff; /* Texto blanco */
+  padding: 20px 0; /* Espaciado interno */
 }
+
+/* Estilo de los enlaces en el footer */
 .footer-links a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 14px;
+  color: #fff; /* Color blanco inicial */
+  text-decoration: none; /* Sin subrayado */
+  font-weight: bold; /* Negrita */
+  font-size: 14px; /* Tamaño de fuente */
+  transition: color 0.3s; /* Transición suave */
 }
+
+/* Cambio de color al pasar el mouse */
 .footer-links a:hover {
-  color: #c90a0a;
+  color: #c90a0a !important; /* Rojo brillante */
 }
-.footer-bottom {
-  font-size: 12px;
-  color: #bbb;
+
+/* Estilo para los enlaces en la parte inferior (términos y privacidad) */
+.footer .small a {
+  color: #bbb; /* Gris claro inicial */
+  text-decoration: none; /* Sin subrayado */
+  transition: color 0.3s; /* Transición suave */
 }
+
+.footer .small a:hover {
+  color: #c90a0a !important; /* Rojo brillante al pasar el mouse */
+}
+
+/* Separador horizontal */
+.footer hr {
+  border-color: #fff; /* Línea blanca */
+  margin: 15px 0; /* Espaciado */
+}
+
+/* Imagen ESRB */
 .footer-right img {
-  height: 50px;
+  max-width: 80px; /* Ancho máximo */
+  height: auto; /* Altura automática */
 }
