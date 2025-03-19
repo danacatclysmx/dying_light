@@ -227,7 +227,6 @@ body {
 /* Fondo del botón con textura */
 .btn--fancy-gold {
   background: url("imgs/textura-hormigon-oscuro.avif") center / cover no-repeat;
-  
 }
 
 .btn--fancy-gold:hover {
@@ -273,12 +272,48 @@ button {
   }
 }
 /*---------------------------------------------*/
+/*  sinopsis  */
 
-
-/*   Sinopsis   */
+/*---------------------------------------------*/
+/*  carrusel  */
 
 /*---------------------------------------------*/
 
+/* Contenedor */
+.contenedor-video {
+  position: relative; /* Mantiene su posición en el flujo del documento */
+  width: 800px; /* Ajusta según el tamaño del marco */
+  height: 400px;
+  margin: 50px auto; /* Centrado y con espacio arriba y abajo */
+  display: flex; /* Asegura que el contenido se comporte correctamente */
+  justify-content: center; /* Centra el video y el marco */
+  align-items: center;
+  background-color: #111;
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.marco {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+/*---------------------------------------------*/
+/*  Galeria  */
+
+/*---------------------------------------------*/
 
 /*   footer   */
 .footer {
@@ -293,7 +328,7 @@ button {
   font-size: 14px;
 }
 .footer-links a:hover {
-  color: #b80505;
+  color: #c90a0a;
 }
 .footer-bottom {
   font-size: 12px;
