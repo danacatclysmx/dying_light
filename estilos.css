@@ -493,7 +493,7 @@ button {
 /* REALIZACIÓN DEL CARRUSEL */
 
 /* Contenedor principal del carrusel */
-.carousel-wrapper {
+.carousel-container {
   position: relative; /* Permite posicionar elementos internos de forma absoluta */
   height: 100vh; /* Ocupa toda la altura de la pantalla */
   overflow: hidden; /* Evita que las imágenes que no están visibles se salgan del contenedor */

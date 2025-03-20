@@ -1,104 +1,105 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="imgs/miniLogo.png" />
-    <link rel="stylesheet" href="estilos.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <title>Dying Light</title>
-  </head>
-  <body>
-    <!-- Navbar -->
-    <nav class="navBar">
-      <div class="navBar_contenedor">
-        <label class="burger" for="burger">
-          <input type="checkbox" id="burger" onclick="toggleMenu()" />
-          <span></span>
-          <span></span>
-          <span></span>
-        </label>
-        <div class="nav_logo">
-          <a href="#" title="Dying Light - Sitio Oficial">
-            <img
-              src="imgs/diying_logo1.0.png"
-              alt="Dying Light - Sitio Oficial"
-            />
-          </a>
-        </div>
-      </div>
-      <ul class="nav_list" id="menu">
-        <li class="nav__li_item">
-          <a href="#Inicio_pagina" title="Inicio">Inicio</a>
-        </li>
-        <li class="nav__li_item">
-          <a href="#Seccion_video" title="Video">Video</a>
-        </li>
-        <li class="nav__li_item">
-          <a href="#seccion_sinopsis" title="Sinopsis">Sinopsis</a>
-        </li>
-        <li class="nav__li_item">
-          <a href="#seccion_galeria" title="Infectados">Infectados</a>
-        </li>
-        <li class="nav__li_item">
-          <a href="#carrusel" title="Carrusel">Carrusel</a>
-        </li>
-        <li class="nav__li_item">
-          <a href="#seccion_reporte" title="Formulario">Formulario</a>
-        </li>
-        <li class="nav__li_item">
-          <a href="#seccion_footer" title="Footer">Footer</a>
-        </li>
-      </ul>
-    </nav>
-    <div class="menu_overlay" id="overlay" onclick="closeMenu()"></div>
-
-    <!-- Inicio -->
-    <header id="Inicio_pagina" class="Inicio_pagina">
-      <div class="inicio_pagina_contenido" id="Inicio">
-        <div class="inicio_pagina_contenido_inner">
-          <div class="inicio_pagina_contenido_info">
-            <h1 class="inicio_pagina_titulo">
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="icon" type="image/png" href="imgs/miniLogo.png" />
+      <link rel="stylesheet" href="estilos.css" />
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+        crossorigin="anonymous"
+      />
+      <title>Dying Light</title>
+    </head>
+    <body>
+      <!-- Navbar -->
+      <nav class="navBar">
+        <div class="navBar_contenedor">
+          <label class="burger" for="burger">
+            <input type="checkbox" id="burger" onclick="toggleMenu()" />
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+          <div class="nav_logo">
+            <a href="#" title="Dying Light - Sitio Oficial">
               <img
-                class="rounded mx-auto d-block"
-                src="imgs/Logo10años.png"
-                alt="Logo del la edicion 10 años de Dying Light"
+                src="imgs/diying_logo1.0.png"
+                alt="Dying Light - Sitio Oficial"
               />
-            </h1>
-            <p class="page-header__description_1">
-              ¡Todo el contenido de los últimos 10 años, todos los DLC, en un
-              paquete!
-            </p>
-            <p class="page-header__description_2">¡¡¡COMPRALO YA!!!</p>
-            <div class="inicio_pagina_botones">
-              <a
-                href="https://www.youtube.com/watch?v=JnI4Dt5G30Q"
-                title="Dying Light Trailer"
-                data-vid="3zeUJaGxe14"
-                class="popYT t_btn btn--fancy btn--fancy-gold"
-                target="_blank"
-                data-gtm-place="intro"
-              >
-                VER EL TRAILER
-              </a>
+            </a>
+          </div>
+        </div>
+        <ul class="nav_list" id="menu">
+          <li class="nav__li_item">
+            <a href="#Inicio_pagina" title="Inicio">Inicio</a>
+          </li>
+          <li class="nav__li_item">
+            <a href="#Seccion_video" title="Video">Video</a>
+          </li>
+          <li class="nav__li_item">
+            <a href="#seccion_sinopsis" title="Sinopsis">Sinopsis</a>
+          </li>
+          <li class="nav__li_item">
+            <a href="#seccion_galeria" title="Infectados">Infectados</a>
+          </li>
+          <li class="nav__li_item">
+            <a href="#carrusel" title="Carrusel">Carrusel</a>
+          </li>
+          <li class="nav__li_item">
+            <a href="#seccion_reporte" title="Formulario">Formulario</a>
+          </li>
+          <li class="nav__li_item">
+            <a href="#seccion_footer" title="Footer">Footer</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="menu_overlay" id="overlay" onclick="closeMenu()"></div>
+
+      <!-- Inicio -->
+      <header id="Inicio_pagina" class="Inicio_pagina">
+        <div class="inicio_pagina_contenido" id="Inicio">
+          <div class="inicio_pagina_contenido_inner">
+            <div class="inicio_pagina_contenido_info">
+              <h1 class="inicio_pagina_titulo">
+                <img
+                  class="rounded mx-auto d-block"
+                  src="imgs/Logo10años.png"
+                  alt="Logo del la edicion 10 años de Dying Light"
+                />
+              </h1>
+              <p class="page-header__description_1">
+                ¡Todo el contenido de los últimos 10 años, todos los DLC, en un
+                paquete!
+              </p>
+              <p class="page-header__description_2">¡¡¡COMPRALO YA!!!</p>
+              <div class="inicio_pagina_botones">
+                <a
+                  href="https://www.youtube.com/watch?v=JnI4Dt5G30Q"
+                  title="Dying Light Trailer"
+                  data-vid="3zeUJaGxe14"
+                  class="popYT t_btn btn--fancy btn--fancy-gold"
+                  target="_blank"
+                  data-gtm-place="intro"
+                >
+                  VER EL TRAILER
+                </a>
+              </div>
+            </div>
+            <div class="Img_sobresalinete">
+              <img
+                src="imgs/Personaje_principal.png"
+                id="crane"
+                alt="Protagonista del juego, Crane"
+                data-depth="0.2"
+              />
             </div>
           </div>
-          <div class="Img_sobresalinete">
-            <img
-              src="imgs/Personaje_principal.png"
-              id="crane"
-              alt="Protagonista del juego, Crane"
-              data-depth="0.2"
-            />
-          </div>
         </div>
-      </div>
-    </header>
+      </header>
+
     <!-- sidebar -->
     <aside class="sidebar">
       <div class="tab">☰</div>
@@ -188,10 +189,10 @@
     </div>
 
     <!-- Carrusel -->
-    <div id="carrusel" class="carousel-wrapper">
-      <button class="prev">&lt;</button> <!-- Botón anterior -->
+    
       
       <div class="carousel-container">
+        <button class="prev" onclick="moverSlide(-1)">&lt;</button>
           <div class="carousel-slide">
               <img src="imgs/Carrusel1.jpg" alt="Imagen 1">
               <img src="imgs/Carrusel2.jpg" alt="Imagen 2">
@@ -199,9 +200,8 @@
               <img src="imgs/Carrusel4.jpg" alt="Imagen 4">
               <img src="imgs/carrusel5.jpg" alt="Imagen 5">
           </div>
+        <button class="next" onclick="moverSlide(1)">&gt;</button> <!-- Botón para ir a la imagen siguiente -->
       </div>
-
-      <button class="next" onclick="moverSlide(1)">&gt;</button> <!-- Botón para ir a la imagen siguiente -->
     </div>
     
     

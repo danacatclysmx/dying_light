@@ -159,27 +159,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // Inicia el auto-carrusel
   reiniciarAutoSlide();
 
-  /**
-   * Agrega un desplazamiento suave cuando se hace clic en los enlaces de navegación.
-   */
-  document.querySelectorAll(".nav-links a").forEach(anchor => {
-      anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-          const targetId = this.getAttribute("href");
-          const targetElement = document.querySelector(targetId);
-
-          if (!targetElement) {
-              console.warn(`Elemento no encontrado: ${targetId}`);
-              return;
-          }
-
-          const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - 80;
-          window.scrollTo({
-              top: targetPosition,
-              behavior: "smooth"
-          });
-      });
-  });
 
   // Hacer que la función moverSlide esté disponible globalmente
   window.moverSlide = moverSlide;
