@@ -12,10 +12,9 @@ function closeMenu() {
   document.getElementById("overlay").classList.remove("active");
   document.getElementById("burger").checked = false;
 }
-document.querySelectorAll(".nav__li_item a").forEach(item => {
+document.querySelectorAll(".nav__li_item a").forEach((item) => {
   item.addEventListener("click", closeMenu);
 });
-
 
 //Inicio
 document.addEventListener("DOMContentLoaded", function () {
@@ -80,13 +79,16 @@ document.addEventListener("DOMContentLoaded", function () {
 //sidebar
 document.addEventListener("DOMContentLoaded", function () {
   const sidebar = document.querySelector(".sidebar");
-  let hasScrolled = false;
+  const tab = document.querySelector(".tab");
 
-  window.addEventListener("scroll", function () {
-    if (window.scrollY > 0 && !hasScrolled) {
-      sidebar.style.display = "block";
-      hasScrolled = true;
-    }
+  // Muestra la sidebar cuando el mouse entra en la pestaña
+  tab.addEventListener("mouseover", function () {
+    sidebar.style.display = "block";
+  });
+
+  // Oculta la sidebar cuando el mouse sale de la pestaña
+  tab.addEventListener("mouseout", function () {
+    sidebar.style.display = "none";
   });
 });
 //Sinopsis
@@ -119,13 +121,11 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //Galeria
-document.querySelectorAll('.contenerdor_galeria div').forEach(div => {
-  const img = document.createElement('img');
+document.querySelectorAll(".contenerdor_galeria div").forEach((div) => {
+  const img = document.createElement("img");
   img.src = div.dataset.img;
   div.appendChild(img);
 });
-
-
 
 //Formulario
 document.addEventListener("DOMContentLoaded", function () {

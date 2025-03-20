@@ -348,11 +348,28 @@ button {
   top: 50%;
   right: 0;
   transform: translateY(-50%);
-  background-color: #0000002c;
+  background-color: #000;
   color: #fff;
   padding: 10px;
   border-radius: 5px 0 0 5px;
-  z-index: 1000;
+  transition: all 0.3s ease; /* Agrega una transición suave */
+}
+
+.tab {
+  display: block; /* Muestra la pestaña siempre */
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  line-height: 20px;
+  cursor: pointer;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 .sticky-sidebar {
@@ -481,7 +498,6 @@ button {
 }
 
 /*---------------------------------------------*/
-
 
 /*  Galeria  */
 .seccion_galeria {
@@ -651,7 +667,6 @@ button {
   height: auto;
   margin: auto;
   overflow: hidden;
-  background-color: #312f2f;
 }
 
 .slider .slide-track {
@@ -659,6 +674,7 @@ button {
   animation: scroll 40s linear infinite;
   -webkit-animation: scroll 40s linear infinite;
   width: calc(200px * 14);
+  background-color: #ffffff;
 }
 
 .slider .slide {
