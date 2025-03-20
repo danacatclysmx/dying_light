@@ -1,143 +1,143 @@
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="icon" type="image/png" href="imgs/miniLogo.png" />
-      <link rel="stylesheet" href="estilos.css" />
-      <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-        crossorigin="anonymous"
-      />
-      <title>Dying Light</title>
-    </head>
-    <body>
-      <!-- Navbar -->
-      <nav class="navBar">
-        <div class="navBar_contenedor">
-          <label class="burger" for="burger">
-            <input type="checkbox" id="burger" onclick="toggleMenu()" />
-            <span></span>
-            <span></span>
-            <span></span>
-          </label>
-          <div class="nav_logo">
-            <a href="#" title="Dying Light - Sitio Oficial">
-              <img
-                src="imgs/diying_logo1.0.png"
-                alt="Dying Light - Sitio Oficial"
-              />
-            </a>
-          </div>
+<!DOCTYPE html> <!-- Declaración del tipo de documento como HTML5 -->
+<html lang="en"> <!-- Etiqueta raíz del documento, con el idioma inglés -->
+  <head> <!-- Sección de metadatos y enlaces a recursos externos -->
+    <meta charset="UTF-8" /> <!-- Especifica la codificación de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Configura la vista para dispositivos móviles -->
+    <link rel="icon" type="image/png" href="imgs/miniLogo.png" /> <!-- Ícono de la pestaña del navegador -->
+    <link rel="stylesheet" href="estilos.css" /> <!-- Enlace a la hoja de estilos personalizada -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    /> <!-- Enlace a la hoja de estilos de Bootstrap -->
+    <title>Dying Light</title> <!-- Título de la página que aparece en la pestaña del navegador -->
+  </head>
+  <body> <!-- Cuerpo del documento, contenido visible de la página -->
+    <!-- Navbar -->
+    <nav class="navBar"> <!-- Barra de navegación -->
+      <div class="navBar_contenedor"> <!-- Contenedor de la barra de navegación -->
+        <label class="burger" for="burger"> <!-- Etiqueta para el menú hamburguesa -->
+          <input type="checkbox" id="burger" onclick="toggleMenu()" /> <!-- Checkbox para alternar el menú -->
+          <span></span> <!-- Líneas del menú hamburguesa -->
+          <span></span>
+          <span></span>
+        </label>
+        <div class="nav_logo"> <!-- Contenedor del logo -->
+          <a href="#" title="Dying Light - Sitio Oficial"> <!-- Enlace al inicio -->
+            <img
+              src="imgs/diying_logo1.0.png"
+              alt="Dying Light - Sitio Oficial"
+            /> <!-- Imagen del logo -->
+          </a>
         </div>
-        <ul class="nav_list" id="menu">
-          <li class="nav__li_item">
-            <a href="#Inicio_pagina" title="Inicio">Inicio</a>
-          </li>
-          <li class="nav__li_item">
-            <a href="#Seccion_video" title="Video">Video</a>
-          </li>
-          <li class="nav__li_item">
-            <a href="#seccion_sinopsis" title="Sinopsis">Sinopsis</a>
-          </li>
-          <li class="nav__li_item">
-            <a href="#seccion_galeria" title="Infectados">Infectados</a>
-          </li>
-          <li class="nav__li_item">
-            <a href="#carrusel" title="Carrusel">Carrusel</a>
-          </li>
-          <li class="nav__li_item">
-            <a href="#seccion_reporte" title="Formulario">Formulario</a>
-          </li>
-          <li class="nav__li_item">
-            <a href="#seccion_footer" title="Footer">Footer</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="menu_overlay" id="overlay" onclick="closeMenu()"></div>
+      </div>
+      <ul class="nav_list" id="menu"> <!-- Lista de elementos del menú -->
+        <li class="nav__li_item">
+          <a href="#Inicio_pagina" title="Inicio">Inicio</a> <!-- Enlace a la sección de inicio -->
+        </li>
+        <li class="nav__li_item">
+          <a href="#Seccion_video" title="Video">Video</a> <!-- Enlace a la sección de video -->
+        </li>
+        <li class="nav__li_item">
+          <a href="#seccion_sinopsis" title="Sinopsis">Sinopsis</a> <!-- Enlace a la sección de sinopsis -->
+        </li>
+        <li class="nav__li_item">
+          <a href="#seccion_galeria" title="Infectados">Infectados</a> <!-- Enlace a la sección de galería -->
+        </li>
+        <li class="nav__li_item">
+          <a href="#carrusel" title="Carrusel">Carrusel</a> <!-- Enlace a la sección del carrusel -->
+        </li>
+        <li class="nav__li_item">
+          <a href="#seccion_reporte" title="Formulario">Formulario</a> <!-- Enlace a la sección del formulario -->
+        </li>
+        <li class="nav__li_item">
+          <a href="#seccion_footer" title="Footer">Footer</a> <!-- Enlace a la sección del pie de página -->
+        </li>
+      </ul>
+    </nav>
+    <div class="menu_overlay" id="overlay" onclick="closeMenu()"></div> <!-- Overlay para cerrar el menú -->
 
-      <!-- Inicio -->
-      <header id="Inicio_pagina" class="Inicio_pagina">
-        <div class="inicio_pagina_contenido" id="Inicio">
-          <div class="inicio_pagina_contenido_inner">
-            <div class="inicio_pagina_contenido_info">
-              <h1 class="inicio_pagina_titulo">
-                <img
-                  class="rounded mx-auto d-block"
-                  src="imgs/Logo10años.png"
-                  alt="Logo del la edicion 10 años de Dying Light"
-                />
-              </h1>
-              <p class="page-header__description_1">
-                ¡Todo el contenido de los últimos 10 años, todos los DLC, en un
-                paquete!
-              </p>
-              <p class="page-header__description_2">¡¡¡COMPRALO YA!!!</p>
-              <div class="inicio_pagina_botones">
-                <a
-                  href="https://www.youtube.com/watch?v=JnI4Dt5G30Q"
-                  title="Dying Light Trailer"
-                  data-vid="3zeUJaGxe14"
-                  class="popYT t_btn btn--fancy btn--fancy-gold"
-                  target="_blank"
-                  data-gtm-place="intro"
-                >
-                  VER EL TRAILER
-                </a>
-              </div>
-            </div>
-            <div class="Img_sobresalinete">
+    <!-- Inicio -->
+    <header id="Inicio_pagina" class="Inicio_pagina"> <!-- Sección de inicio -->
+      <div class="inicio_pagina_contenido" id="Inicio"> <!-- Contenedor del contenido de inicio -->
+        <div class="inicio_pagina_contenido_inner"> <!-- Contenedor interno -->
+          <div class="inicio_pagina_contenido_info"> <!-- Información del inicio -->
+            <h1 class="inicio_pagina_titulo"> <!-- Título del inicio -->
               <img
-                src="imgs/Personaje_principal.png"
-                id="crane"
-                alt="Protagonista del juego, Crane"
-                data-depth="0.2"
-              />
+                class="rounded mx-auto d-block"
+                src="imgs/Logo10años.png"
+                alt="Logo del la edicion 10 años de Dying Light"
+              /> <!-- Imagen del logo de los 10 años -->
+            </h1>
+            <p class="page-header__description_1"> <!-- Descripción 1 -->
+              ¡Todo el contenido de los últimos 10 años, todos los DLC, en un
+              paquete!
+            </p>
+            <p class="page-header__description_2">¡¡¡COMPRALO YA!!!</p> <!-- Descripción 2 -->
+            <div class="inicio_pagina_botones"> <!-- Botones del inicio -->
+              <a
+                href="https://www.youtube.com/watch?v=JnI4Dt5G30Q"
+                title="Dying Light Trailer"
+                data-vid="3zeUJaGxe14"
+                class="popYT t_btn btn--fancy btn--fancy-gold"
+                target="_blank"
+                data-gtm-place="intro"
+              >
+                VER EL TRAILER
+              </a> <!-- Enlace al trailer -->
             </div>
           </div>
+          <div class="Img_sobresalinete"> <!-- Imagen del personaje principal -->
+            <img
+              src="imgs/Personaje_principal.png"
+              id="crane"
+              alt="Protagonista del juego, Crane"
+              data-depth="0.2"
+            />
+          </div>
         </div>
-      </header>
+      </div>
+    </header>
 
     <!-- sidebar -->
-    <aside class="sidebar">
-      <div class="tab">☰</div>
-      <div class="sticky-sidebar">
-        <h2>REDES SOCIALES!</h2>
+    <aside class="sidebar"> <!-- Barra lateral -->
+      <div class="tab">☰</div> <!-- Pestaña para abrir/cerrar la barra lateral -->
+      <div class="sticky-sidebar"> <!-- Contenido de la barra lateral -->
+        <h2>REDES SOCIALES!</h2> <!-- Título de la sección -->
         <a href="https://www.facebook.com/dynglight/?locale=es_LA" target="_blank" class="unstyled-link">
-          <img src="imgs/icons8-facebook-nuevo-50.png" alt="facebook" />
+          <img src="imgs/icons8-facebook-nuevo-50.png" alt="facebook" /> <!-- Enlace a Facebook -->
         </a>
         <a href="https://www.instagram.com/dyinglightgame/?hl=es-la" target="_blank" class="unstyled-link">
-          <img src="imgs/icons8-instagram-48.png" alt="instagram" />
+          <img src="imgs/icons8-instagram-48.png" alt="instagram" /> <!-- Enlace a Instagram -->
         </a>
         <a href="https://discord.com/invite/dyinglight" target="_blank" class="unstyled-link">
-          <img src="imgs/icons8-logotipo-de-la-discordia-50.png" alt="discord" />
+          <img src="imgs/icons8-logotipo-de-la-discordia-50.png" alt="discord" /> <!-- Enlace a Discord -->
         </a>
         <a href="https://www.twitch.tv/directory/category/dying-light" target="_blank" class="unstyled-link">
-          <img src="imgs/icons8-twitch-50.png" alt="twitch" />
+          <img src="imgs/icons8-twitch-50.png" alt="twitch" /> <!-- Enlace a Twitch -->
         </a>
         <a href="https://www.youtube.com/@DyingLightGameOfficial" target="_blank" class="unstyled-link">
-          <img src="imgs/icons8-youtube-50.png" alt="youtube" />
+          <img src="imgs/icons8-youtube-50.png" alt="youtube" /> <!-- Enlace a YouTube -->
         </a>
       </div>
     </aside>
 
     <!-- Video -->
-    <div id="Seccion_video" class="contenedor-video">
-      <video class="video" autoplay loop muted>
-        <source src="Dying Light — 10 Years in Numbers.mp4" type="video/mp4" />
-        Tu navegador no soporta el video.
+    <div id="Seccion_video" class="contenedor-video"> <!-- Sección de video -->
+      <video class="video" autoplay loop muted> <!-- Video con autoplay, loop y muteado -->
+        <source src="Dying Light — 10 Years in Numbers.mp4" type="video/mp4" /> <!-- Fuente del video -->
+        Tu navegador no soporta el video. <!-- Mensaje de respaldo si el video no se puede reproducir -->
       </video>
-      <img class="marco" src="imgs/image.png" alt="Marco del video" />
+      <img class="marco" src="imgs/image.png" alt="Marco del video" /> <!-- Marco decorativo del video -->
     </div>
 
     <!-- Sinopsis -->
-    <div id="seccion_sinopsis" class="Sinopsis_seccion">
-      <div class="contenedor_sinopsis">
-        <div class="Sinopsis_content">
-          <h1 class="titulo_sinopsis"><strong> SINOPSIS </strong></h1>
-          <p class="texto_sinopsis1">
+    <div id="seccion_sinopsis" class="Sinopsis_seccion"> <!-- Sección de sinopsis -->
+      <div class="contenedor_sinopsis"> <!-- Contenedor de la sinopsis -->
+        <div class="Sinopsis_content"> <!-- Contenido de la sinopsis -->
+          <h1 class="titulo_sinopsis"><strong> SINOPSIS </strong></h1> <!-- Título de la sinopsis -->
+          <p class="texto_sinopsis1"> <!-- Párrafo 1 de la sinopsis -->
             En un mundo devastado por una infección viral, la ciudad de Harran
             ha sido puesta en cuarentena, convirtiéndose en un campo de batalla
             entre los supervivientes y hordas de infectados sedientos de sangre.
@@ -145,22 +145,22 @@
             es enviado a la ciudad con la misión de recuperar un documento
             crucial que podría determinar el destino de la humanidad.
           </p>
-          <p class="texto_sinopsis2">
+          <p class="texto_sinopsis2"> <!-- Párrafo 2 de la sinopsis -->
             Sin embargo, al adentrarse en Harran, Crane se encuentra atrapado
             entre la lucha por la supervivencia de los habitantes y los oscuros
             secretos de su propia organización. Mientras busca cumplir su
             misión, se ve obligado a tomar decisiones que pondrán a prueba su
             moralidad y su lealtad.
           </p>
-          <p class="texto_sinopsis3">
+          <p class="texto_sinopsis3"> <!-- Párrafo 3 de la sinopsis -->
             Con mecánicas de parkour, un combate brutal y un ciclo dinámico de
             día y noche donde los infectados se vuelven más agresivos en la
             oscuridad, Dying Light ofrece una intensa experiencia de
-            supervivencia en un mundo abierto lleno de peligros.
+            supervivencia en un mundo abierto lleno de peligros.
           </p>
         </div>
       </div>
-      <div class="Sinopisis_imagen">
+      <div class="Sinopisis_imagen"> <!-- Imagen de la sinopsis -->
         <img
           src="imgs/rais.webp"
           id="rais"
@@ -170,10 +170,10 @@
     </div>
 
     <!-- Galeria-->
-    <div id="seccion_galeria" class="seccion_galeria">
-      <h1 class="titulo_galeria">INFECTADOS</h1>
-      <div class="contenerdor_galeria">
-        <div class="Mordedor" data-img="imgs/Biter.webp">Mordedor</div>
+    <div id="seccion_galeria" class="seccion_galeria"> <!-- Sección de galería -->
+      <h1 class="titulo_galeria">INFECTADOS</h1> <!-- Título de la galería -->
+      <div class="contenerdor_galeria"> <!-- Contenedor de la galería -->
+        <div class="Mordedor" data-img="imgs/Biter.webp">Mordedor</div> <!-- Elemento de la galería -->
         <div class="Tanque_de_Gas" data-img="imgs/Gastank.webp">
           Tanque de Gas
         </div>
@@ -189,35 +189,30 @@
     </div>
 
     <!-- Carrusel -->
-    
-      
-      <div class="carousel-container">
-        <button class="prev" onclick="moverSlide(-1)">&lt;</button>
-          <div class="carousel-slide">
-              <img src="imgs/Carrusel1.jpg" alt="Imagen 1">
-              <img src="imgs/Carrusel2.jpg" alt="Imagen 2">
-              <img src="imgs/Carrusel3.jpg" alt="Imagen 3">
-              <img src="imgs/Carrusel4.jpg" alt="Imagen 4">
-              <img src="imgs/carrusel5.jpg" alt="Imagen 5">
-          </div>
-        <button class="next" onclick="moverSlide(1)">&gt;</button> <!-- Botón para ir a la imagen siguiente -->
+    <div class="carousel-container"> <!-- Contenedor del carrusel -->
+      <button class="prev" onclick="moverSlide(-1)">&lt;</button> <!-- Botón para retroceder -->
+      <div class="carousel-slide"> <!-- Contenedor de las imágenes del carrusel -->
+        <img src="imgs/Carrusel1.jpg" alt="Imagen 1"> <!-- Imagen 1 del carrusel -->
+        <img src="imgs/Carrusel2.jpg" alt="Imagen 2"> <!-- Imagen 2 del carrusel -->
+        <img src="imgs/Carrusel3.jpg" alt="Imagen 3"> <!-- Imagen 3 del carrusel -->
+        <img src="imgs/Carrusel4.jpg" alt="Imagen 4"> <!-- Imagen 4 del carrusel -->
+        <img src="imgs/carrusel5.jpg" alt="Imagen 5"> <!-- Imagen 5 del carrusel -->
       </div>
+      <button class="next" onclick="moverSlide(1)">&gt;</button> <!-- Botón para avanzar -->
     </div>
-    
-    
 
     <!-- Formulario Reporte de Zombis -->
-    <section id="seccion_reporte" class="seccion-formulario">
-      <div class="container">
-        <div class="modo-toggle text-center mb-4">
+    <section id="seccion_reporte" class="seccion-formulario"> <!-- Sección del formulario -->
+      <div class="container"> <!-- Contenedor del formulario -->
+        <div class="modo-toggle text-center mb-4"> <!-- Botón para cambiar el modo noche/día -->
           <button id="modoBtn" class="btn btn-dark">🌙 Modo Noche</button>
         </div>
-        <div class="reporte-form mx-auto">
-          <h2 class="text-center">
+        <div class="reporte-form mx-auto"> <!-- Formulario de reporte -->
+          <h2 class="text-center"> <!-- Título del formulario -->
             <i class="fa-solid fa-biohazard"></i> Reporte de Zombis o Bugs
           </h2>
-          <form id="reporteForm">
-            <div class="mb-3">
+          <form id="reporteForm"> <!-- Formulario -->
+            <div class="mb-3"> <!-- Campo de nombre -->
               <label for="nombre" class="form-label"
                 >Nombre de Superviviente:</label
               >
@@ -229,7 +224,7 @@
                 required
               />
             </div>
-            <div class="mb-3">
+            <div class="mb-3"> <!-- Campo de tipo de reporte -->
               <label for="tipo" class="form-label">Tipo de Reporte:</label>
               <select id="tipo" class="form-select" required>
                 <option value="">Selecciona una opción...</option>
@@ -237,7 +232,7 @@
                 <option value="bug">Error del Sistema</option>
               </select>
             </div>
-            <div class="mb-3">
+            <div class="mb-3"> <!-- Campo de descripción -->
               <label for="descripcion" class="form-label">Descripción:</label>
               <textarea
                 id="descripcion"
@@ -247,22 +242,25 @@
                 required
               ></textarea>
             </div>
-            <div class="mb-3">
+            <div class="mb-3"> <!-- Campo para adjuntar archivo -->
               <label for="archivo" class="form-label"
                 >Adjuntar Evidencia (Opcional):</label
               >
               <input type="file" id="archivo" class="form-control" />
             </div>
-            <button type="submit" class="btn btn-danger w-100">
+            <button type="submit" class="btn btn-danger w-100"> <!-- Botón de enviar -->
               <i class="fa-solid fa-satellite-dish"></i> Enviar Reporte
             </button>
           </form>
         </div>
       </div>
     </section>
-    <!-- slider plataformas -->
+    
+    <!-- Contenedor principal del slider de plataformas -->
     <div class="slider">
+      <!-- Pista que contiene todas las diapositivas -->
       <div class="slide-track">
+        <!-- Cada "slide" contiene una imagen de la plataforma -->
         <div class="slide">
           <img src="imgs/plataforma1.png" alt="Imagen 1" />
         </div>
@@ -278,6 +276,7 @@
         <div class="slide">
           <img src="imgs/plataforma5.png" alt="Imagen 5" />
         </div>
+        <!-- Se repiten imágenes para generar un efecto de desplazamiento continuo -->
         <div class="slide">
           <img src="imgs/plataforma1.png" alt="Imagen 6" />
         </div>
@@ -296,11 +295,11 @@
       </div>
     </div>
 
-    <!-- Footer -->
+    <!-- Sección del pie de página -->
     <footer id="seccion_footer" class="footer bg-dark text-light py-3">
       <div class="container">
         <div class="row align-items-center text-center text-md-start">
-          <!-- Links -->
+          <!-- Sección de enlaces del footer -->
           <div class="col-md-8 footer-links">
             <a href="https://techland.net/" class="text-light">TECHLAND</a>
             &nbsp;|&nbsp;
@@ -308,7 +307,7 @@
             <a href="#" class="text-light">PROYECTOS DE LA UE</a> &nbsp;|&nbsp;
             <a href="#" class="text-light">CONTACTO Y CENTRO DE PRENSA</a>
           </div>
-          <!-- Imagen ESRB alineada a la derecha -->
+          <!-- Imagen de clasificación ESRB alineada a la derecha -->
           <div class="col-md-4 text-md-end mt-3 mt-md-0">
             <img
               src="imgs/ESRB_Mature_17+.svg.png"
@@ -318,9 +317,9 @@
             />
           </div>
         </div>
-        <!-- Línea separadora -->
+        <!-- Línea separadora en el footer -->
         <hr class="bg-light" />
-        <!-- Parte inferior -->
+        <!-- Texto de derechos de autor -->
         <div class="text-center small">
           ©2024 Techland S.A. Todos los derechos reservados. <br />
           ©2025 David Bravo, Giseth Díaz, Dana Romero.
@@ -333,14 +332,18 @@
       </div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- Inclusión de scripts externos -->
     <script src="script.js"></script>
+    <!-- Bootstrap: framework de diseño responsivo -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <!-- jQuery: librería para manipulación del DOM -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- FontAwesome: íconos personalizados -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+
   </body>
 </html>
