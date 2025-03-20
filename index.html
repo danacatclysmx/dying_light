@@ -46,7 +46,7 @@
           <a href="#seccion_galeria" title="Infectados">Infectados</a>
         </li>
         <li class="nav__li_item">
-          <a href="#" title="Carrusel">Carrusel</a>
+          <a href="#carrusel" title="Carrusel">Carrusel</a>
         </li>
         <li class="nav__li_item">
           <a href="#seccion_reporte" title="Formulario">Formulario</a>
@@ -104,11 +104,21 @@
       <div class="tab">☰</div>
       <div class="sticky-sidebar">
         <h2>REDES SOCIALES!</h2>
-        <img src="imgs/icons8-facebook-nuevo-50.png" alt="facebook" />
-        <img src="imgs/icons8-instagram-48.png" alt="instagram" />
-        <img src="imgs/icons8-logotipo-de-la-discordia-50.png" alt="discord" />
-        <img src="imgs/icons8-twitch-50.png" alt="twitch" />
-        <img src="imgs/icons8-youtube-50.png" alt="youtube" />
+        <a href="https://www.facebook.com/dynglight/?locale=es_LA" target="_blank" class="unstyled-link">
+          <img src="imgs/icons8-facebook-nuevo-50.png" alt="facebook" />
+        </a>
+        <a href="https://www.instagram.com/dyinglightgame/?hl=es-la" target="_blank" class="unstyled-link">
+          <img src="imgs/icons8-instagram-48.png" alt="instagram" />
+        </a>
+        <a href="https://discord.com/invite/dyinglight" target="_blank" class="unstyled-link">
+          <img src="imgs/icons8-logotipo-de-la-discordia-50.png" alt="discord" />
+        </a>
+        <a href="https://www.twitch.tv/directory/category/dying-light" target="_blank" class="unstyled-link">
+          <img src="imgs/icons8-twitch-50.png" alt="twitch" />
+        </a>
+        <a href="https://www.youtube.com/@DyingLightGameOfficial" target="_blank" class="unstyled-link">
+          <img src="imgs/icons8-youtube-50.png" alt="youtube" />
+        </a>
       </div>
     </aside>
 
@@ -178,6 +188,23 @@
     </div>
 
     <!-- Carrusel -->
+    <div id="carrusel" class="carousel-wrapper">
+      <button class="prev">&lt;</button> <!-- Botón anterior -->
+      
+      <div class="carousel-container">
+          <div class="carousel-slide">
+              <img src="imgs/Carrusel1.jpg" alt="Imagen 1">
+              <img src="imgs/Carrusel2.jpg" alt="Imagen 2">
+              <img src="imgs/Carrusel3.jpg" alt="Imagen 3">
+              <img src="imgs/Carrusel4.jpg" alt="Imagen 4">
+              <img src="imgs/carrusel5.jpg" alt="Imagen 5">
+          </div>
+      </div>
+
+      <button class="next" onclick="moverSlide(1)">&gt;</button> <!-- Botón para ir a la imagen siguiente -->
+    </div>
+    
+    
 
     <!-- Formulario Reporte de Zombis -->
     <section id="seccion_reporte" class="seccion-formulario">

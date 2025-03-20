@@ -132,6 +132,58 @@ document.querySelectorAll('.contenerdor_galeria div').forEach(div => {
       img.style.transform = 'scale(0.8)';
   });
 });
+//CARRUSEL
+document.addEventListener("DOMContentLoaded", function () {
+  let index = 0;
+  const slides = document.querySelector(".carousel-slide");
+  const totalSlides = slides.children.length;
+  let autoSlide;
+
+  /**
+         * Mueve el carrusel en la dirección indicada.
+         */
+  function moverSlide(n) {
+    index = (index + n + totalSlides) % totalSlides;
+    slides.style.transform = `translateX(${-index * 100}vw)`;
+    reiniciarAutoSlide();
+  }
+
+  /**
+   * Reinicia el auto-desplazamiento del carrusel.
+   */
+  function reiniciarAutoSlide() {
+      clearInterval(autoSlide);
+      autoSlide = setInterval(() => moverSlide(1), 7000);
+  }
+
+  // Inicia el auto-carrusel
+  reiniciarAutoSlide();
+
+  /**
+   * Agrega un desplazamiento suave cuando se hace clic en los enlaces de navegación.
+   */
+  document.querySelectorAll(".nav-links a").forEach(anchor => {
+      anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute("href");
+          const targetElement = document.querySelector(targetId);
+
+          if (!targetElement) {
+              console.warn(`Elemento no encontrado: ${targetId}`);
+              return;
+          }
+
+          const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - 80;
+          window.scrollTo({
+              top: targetPosition,
+              behavior: "smooth"
+          });
+      });
+  });
+
+  // Hacer que la función moverSlide esté disponible globalmente
+  window.moverSlide = moverSlide;
+});
 
 //Formulario
 document.addEventListener("DOMContentLoaded", function () {

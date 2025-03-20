@@ -490,7 +490,61 @@ button {
 }
 
 /*---------------------------------------------*/
-/*  carrusel  */
+/* REALIZACIÓN DEL CARRUSEL */
+
+/* Contenedor principal del carrusel */
+.carousel-wrapper {
+  position: relative; /* Permite posicionar elementos internos de forma absoluta */
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  overflow: hidden; /* Evita que las imágenes que no están visibles se salgan del contenedor */
+}
+
+/* Botones de navegación (anterior y siguiente) */
+.prev, .next {
+  position: absolute; /* Se posicionan de forma absoluta dentro del carrusel */
+  top: 50%; /* Centra los botones verticalmente */
+  transform: translateY(-50%); /* Ajusta el centrado exacto */
+  background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mayor visibilidad */
+  border: none; /* Elimina los bordes predeterminados */
+  color: white; /* Color del ícono de navegación */
+  font-size: 40px; /* Tamaño del ícono */
+  padding: 15px; /* Espaciado interno para mejor usabilidad */
+  cursor: pointer; /* Cambia el cursor a "mano" al pasar sobre el botón */
+  z-index: 10; /* Asegura que los botones estén sobre las imágenes */
+  transition: background 0.3s; /* Transición suave en el cambio de color */
+}
+
+/* Cambio de color al pasar el mouse sobre los botones */
+.prev:hover, .next:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Posición específica de los botones */
+.prev { left: 10px; } /* Botón anterior a la izquierda */
+.next { right: 10px; } /* Botón siguiente a la derecha */
+
+/* Contenedor del carrusel */
+.carousel-container {
+  width: 100vw; /* Ocupa todo el ancho de la pantalla */
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  overflow: hidden; /* Evita que las imágenes desborden */
+}
+
+/* Contenedor de las imágenes, alineadas en fila */
+.carousel-slide {
+  display: flex; /* Permite que las imágenes se alineen horizontalmente */
+  width: 500%; /* Ajuste dinámico según la cantidad de imágenes */
+  height: 100vh; /* Asegura que cada imagen ocupe toda la altura de la pantalla */
+  transition: transform 0.5s ease-in-out; /* Efecto de desplazamiento suave */
+}
+
+/* Ajustes de las imágenes dentro del carrusel */
+.carousel-slide img {
+  width: 100vw; /* Cada imagen ocupa todo el ancho de la pantalla */
+  height: 100vh; /* Cada imagen ocupa toda la altura de la pantalla */
+  object-fit: cover; /* Ajusta la imagen sin deformarla, recortando si es necesario */
+}
+/* FIN DEL CARRUSEL */
 
 /*---------------------------------------------*/
 
