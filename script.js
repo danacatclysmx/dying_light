@@ -112,10 +112,25 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //Galeria
-document.querySelectorAll(".contenerdor_galeria div").forEach((div) => {
-  const img = document.createElement("img");
+document.querySelectorAll('.contenerdor_galeria div').forEach(div => {
+  const img = document.createElement('img');
   img.src = div.dataset.img;
+  img.style.position = 'absolute';
+  img.style.opacity = '0';
+  img.style.transform = 'scale(0.8)';
+  img.style.transition = 'opacity 0.3s ease-in, transform 0.3s ease-in';
+  img.style.pointerEvents = 'none'; // Evita que interfiera cuando está oculta
   div.appendChild(img);
+
+  div.addEventListener('mouseenter', () => {
+      img.style.opacity = '1';
+      img.style.transform = 'scale(1)';
+  });
+
+  div.addEventListener('mouseleave', () => {
+      img.style.opacity = '0';
+      img.style.transform = 'scale(0.8)';
+  });
 });
 
 //Formulario

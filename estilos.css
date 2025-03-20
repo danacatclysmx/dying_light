@@ -153,7 +153,7 @@ body {
 /*   inicio   */
 .Inicio_pagina {
   background: url("imgs/plano_ciudad.jpg") no-repeat center center;
-  background-size: 1550px 800px; /* Tamaño fijo */
+  background-size: 100vw 100vh; /* Tamaño fijo */
   height: 100vh;
 }
 
@@ -411,6 +411,7 @@ button {
 .Sinopsis_seccion {
   height: 100vh;
   background: url(imgs/fondo_sinopsis.jpg) no-repeat center center fixed;
+  background-size: 100vw 100vh; /* Tamaño fijo */
   display: flex; /* Usa flexbox */
   justify-content: space-between; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente si es necesario */
@@ -516,7 +517,7 @@ button {
 
 /*  Galeria  */
 .seccion_galeria {
-  background: #212529;
+  background: #343535;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -524,7 +525,19 @@ button {
   justify-content: center;
   padding-top: 20px;
   padding-bottom: 20px;
+  border-radius: 5px;
 }
+
+.seccion_galeria h1{
+  font-family: "28DaysLater", sans-serif;;
+  letter-spacing: 4px;
+  color: #ffab00;
+  font-weight: bold;
+  position: relative;
+  font-size: 60px; /* Tamaño del texto */
+  padding-left: 15px;
+}
+
 .contenerdor_galeria {
   display: flex;
   flex-wrap: wrap;
@@ -532,20 +545,26 @@ button {
   justify-content: center;
 }
 .contenerdor_galeria div {
+  font-family: "28DaysLater", sans-serif;;
+  letter-spacing: 2px;
+  border-radius: 6px;
   background: url(imgs/textura-hormigon-oscuro.avif) no-repeat center center;
   width: 500px;
   height: 300px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
+  justify-content: start;
+  align-items: start;
+  text-align: start;
+  color: #ffab00;
   font-weight: bold;
   cursor: pointer;
   position: relative;
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
+  font-size: 30px; /* Tamaño del texto */
+  padding-left: 15px;
 }
+
 .contenerdor_galeria div img {
   width: 100%;
   height: 100%;
@@ -554,6 +573,9 @@ button {
   position: absolute;
   transition: opacity 0.8s ease-in, transform 0.8s ease-in;
   transform: scale(0.8);
+}
+.contenerdor_galeria a {
+  color: #ffab00;
 }
 .contenerdor_galeria div span {
   transition: opacity 0.3s ease-out, transform 0.3s ease-out;
