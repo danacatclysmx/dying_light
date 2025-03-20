@@ -61,7 +61,7 @@ body {
   width: 100%;
   background: white;
   border-radius: 9px;
-  transition: .25s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
 
 /* Posición inicial de las líneas */
@@ -92,7 +92,6 @@ body {
   transform: rotate(-45deg);
   top: 50%;
 }
-
 
 /* Estilos del menú */
 .nav_list {
@@ -200,7 +199,7 @@ body {
 }
 
 .page-header__description_2 {
-  font-family: 'BlackOpsOne', sans-serif;
+  font-family: "BlackOpsOne", sans-serif;
   color: white;
   font-size: 18px;
   text-align: center;
@@ -325,8 +324,8 @@ button {
 }
 
 @font-face {
-  font-family: 'Tahoma';
-  src: url('fonts/tahoma.ttf') format('truetype');
+  font-family: "Tahoma";
+  src: url("fonts/tahoma.ttf") format("truetype");
 }
 
 .Img_sobresalinete {
@@ -341,7 +340,40 @@ button {
 .Img_sobresalinete img {
   height: 100vh; /* Ocupa toda la altura de la pantalla */
 }
+/*---------------------------------------------*/
+/*  sidebar  */
+.sidebar {
+  display: none; /* Oculta la sidebar inicialmente */
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background-color: #0000002c;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px 0 0 5px;
+  z-index: 1000;
+}
 
+.sticky-sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sticky-sidebar button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.sticky-sidebar img {
+  width: 30px;
+  margin: 5px 0;
+}
 /*---------------------------------------------*/
 /*  sinopsis  */
 .Sinopsis_seccion {
@@ -371,22 +403,22 @@ button {
 }
 
 @font-face {
-  font-family: '28DaysLater';
-  src: url('fonts/28\ Days\ Later.ttf') format('truetype');
+  font-family: "28DaysLater";
+  src: url("fonts/28\ Days\ Later.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'LastDays';
-  src: url('fonts/Last\ Days.ttf') format('truetype');
+  font-family: "LastDays";
+  src: url("fonts/Last\ Days.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'BlackOpsOne';
-  src: url('fonts/BlackOpsOne-Regular.ttf') format('truetype');
+  font-family: "BlackOpsOne";
+  src: url("fonts/BlackOpsOne-Regular.ttf") format("truetype");
 }
 
 .titulo_sinopsis {
-  font-family: '28DaysLater', sans-serif;
+  font-family: "28DaysLater", sans-serif;
   font-size: 38px; /* Ajusta el tamaño según necesites */
   line-height: 20px;
   padding-bottom: 10px;
@@ -396,14 +428,13 @@ button {
 .texto_sinopsis1,
 .texto_sinopsis2,
 .texto_sinopsis3 {
-  font-family: '28DaysLater', sans-serif;
+  font-family: "28DaysLater", sans-serif;
   font-size: 20px;
   line-height: 20px;
   color: #000000; /* Cambia el color aquí (ejemplo: blanco) */
 }
 
 .Sinopisis_imagen {
-
   position: absolute; /* Se coloca sobre el contenido */
   right: 0; /* Se alinea a la derecha */
   z-index: 2; /* Se asegura de que esté por encima de todo */
@@ -428,14 +459,15 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color:transparent;
+  background-color: transparent;
   overflow: hidden;
 }
 
 .video {
-  width: 100%;
-  height: 100%;
+  width: 1210px;
+  height: 550px;
   object-fit: cover; /* Asegura que el video cubra toda la pantalla sin deformarse */
+  margin-top: 90px;
 }
 
 .marco {
@@ -542,7 +574,7 @@ button {
 /* Título del formulario */
 .reporte-form h2 {
   text-align: center;
-  font-family: 'BlackOpsOne', sans-serif;
+  font-family: "BlackOpsOne", sans-serif;
   font-size: 24px;
   margin-bottom: 20px;
 }
@@ -612,9 +644,48 @@ button {
     padding: 8px;
   }
 }
-
 /*---------------------------------------------*/
+/* estilos para el slider de plataformas */
+.slider {
+  width: 75vw;
+  height: auto;
+  margin: auto;
+  overflow: hidden;
+  background-color: #312f2f;
+}
 
+.slider .slide-track {
+  display: flex;
+  animation: scroll 40s linear infinite;
+  -webkit-animation: scroll 40s linear infinite;
+  width: calc(200px * 14);
+}
+
+.slider .slide {
+  width: 200px;
+  height: 150px; /* Establece una altura fija */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider .slide img {
+  max-width: 100%; /* Asegura que la imagen no sea más ancha que el contenedor */
+  max-height: 100%; /* Asegura que la imagen no sea más alta que el contenedor */
+  object-fit: cover; /* Ajusta la imagen para cubrir todo el espacio sin deformarse */
+}
+
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-200px * 7));
+    transform: translateX(calc(-200px * 7));
+  }
+}
+/*---------------------------------------------*/
 /* Estilo general del footer */
 .footer {
   background-color: #111; /* Negro oscuro */
@@ -633,7 +704,7 @@ button {
 
 /* Cambio de color al pasar el mouse */
 .footer-links a:hover {
-  color: #c90a0a !important; /* Rojo brillante */
+  color: #ffab00 !important; /* Rojo brillante */
 }
 
 /* Estilo para los enlaces en la parte inferior (términos y privacidad) */
@@ -644,7 +715,7 @@ button {
 }
 
 .footer .small a:hover {
-  color: #c90a0a !important; /* Rojo brillante al pasar el mouse */
+  color: #ffab00 !important; /* Rojo brillante al pasar el mouse */
 }
 
 /* Separador horizontal */
