@@ -12,6 +12,9 @@ function closeMenu() {
     document.getElementById("overlay").classList.remove("active");
     document.getElementById("burger").checked = false;
 }
+document.querySelectorAll(".nav__li_item a").forEach(item => {
+  item.addEventListener("click", closeMenu);
+});
 
 
 //Inicio
@@ -93,6 +96,13 @@ document.addEventListener("DOMContentLoaded", function () {
     
     window.addEventListener("scroll", updateImagePosition);
     updateImagePosition();
+});
+
+//Galeria
+document.querySelectorAll('.contenerdor_galeria div').forEach(div => {
+  const img = document.createElement('img');
+  img.src = div.dataset.img;
+  div.appendChild(img);
 });
 
 
