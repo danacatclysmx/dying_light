@@ -1,25 +1,30 @@
 //NavBar
+// Función para alternar la visibilidad del menú de navegación
 function toggleMenu() {
   let menu = document.getElementById("menu");
   let overlay = document.getElementById("overlay");
   let checkbox = document.getElementById("burger");
+  // Alterna la clase 'active' en el menú y overlay según el estado del checkbox
   menu.classList.toggle("active", checkbox.checked);
   overlay.classList.toggle("active", checkbox.checked);
 }
-
+// Función para cerrar el menú de navegación
 function closeMenu() {
   document.getElementById("menu").classList.remove("active");
   document.getElementById("overlay").classList.remove("active");
   document.getElementById("burger").checked = false;
 }
+// Cierra el menú cuando un enlace del menú es clicado
 document.querySelectorAll(".nav__li_item a").forEach((item) => {
   item.addEventListener("click", closeMenu);
 });
 
 //Inicio
+// Efecto de animación de imagen al hacer scrol
 document.addEventListener("DOMContentLoaded", function () {
   const craneImage = document.getElementById("crane");
   const initialOffset = 150; // Ajusta la posición inicial de la imagen fuera de la pantalla
+  // Configura la posición inicial y la transición de la imagen
   craneImage.style.transform = `translateX(${initialOffset}px)`;
   craneImage.style.transition = "transform 1s ease-out, opacity 0.8s ease-in"; // Hacer más rápida la aparición al hacer scroll hacia arriba
 
@@ -76,21 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
-//sidebar
-document.addEventListener("DOMContentLoaded", function () {
-  const sidebar = document.querySelector(".sidebar");
-  const tab = document.querySelector(".tab");
 
-  // Muestra la sidebar cuando el mouse entra en la pestaña
-  tab.addEventListener("mouseover", function () {
-    sidebar.style.display = "block";
-  });
-
-  // Oculta la sidebar cuando el mouse sale de la pestaña
-  tab.addEventListener("mouseout", function () {
-    sidebar.style.display = "none";
-  });
-});
 //Sinopsis
 document.addEventListener("DOMContentLoaded", function () {
   const raisImage = document.getElementById("rais");

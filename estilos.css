@@ -343,53 +343,68 @@ button {
 /*---------------------------------------------*/
 /*  sidebar  */
 .sidebar {
-  display: none; /* Oculta la sidebar inicialmente */
   position: fixed;
   top: 50%;
-  right: 0;
+  right: -80px; /* Inicialmente oculta fuera de la pantalla */
   transform: translateY(-50%);
   background-color: #000;
   color: #fff;
   padding: 10px;
   border-radius: 5px 0 0 5px;
-  transition: all 0.3s ease; /* Agrega una transición suave */
+  transition: right 0.3s ease; /* Transición suave */
+  width: 80px;
+  text-align: center;
+  z-index: 1000;
 }
 
+/* Pestaña de activación */
 .tab {
-  display: block; /* Muestra la pestaña siempre */
   position: absolute;
-  right: -20px;
+  left: -30px;
   top: 50%;
   transform: translateY(-50%);
-  width: 20px;
-  height: 20px;
-  background-color: #000;
-  color: #fff;
+  width: 30px;
+  height: 60px;
+  background-color: #ffab00;
+  color: white;
   text-align: center;
-  line-height: 20px;
+  line-height: 60px;
   cursor: pointer;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
+  font-weight: bold;
 }
 
+/* Contenedor de íconos */
 .sticky-sidebar {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.sticky-sidebar button {
-  background-color: red;
-  color: white;
-  border: none;
-  padding: 10px 20px;
+/* Botón rojo */
+.sticky-sidebar h2 {
+  background-color: #ffab00;
+  padding: 10px;
   margin-bottom: 10px;
-  cursor: pointer;
+  font-size: 16px;
 }
 
+/* Íconos */
 .sticky-sidebar img {
-  width: 30px;
+  width: 40px;
   margin: 5px 0;
+  transition: transform 0.3s ease; /* Efecto de movimiento */
+}
+
+/* Efecto hover en los íconos */
+.sticky-sidebar img:hover {
+  transform: scale(1.2); /* Aumenta el tamaño del ícono */
+}
+
+/* Mostrar la sidebar cuando se pasa el mouse */
+.sidebar:hover {
+  right: 0;
 }
 /*---------------------------------------------*/
 /*  sinopsis  */
