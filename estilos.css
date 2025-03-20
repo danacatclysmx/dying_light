@@ -1,185 +1,186 @@
+/* Estilos generales para el body */
 body {
-  background-color: black;
-  overflow-x: hidden; /* Evita que la página se desplace a la derecha */
-  margin: 0; /* Asegura que no haya márgenes que causen desplazamiento */
-  padding: 0;
+  background-color: black; /* Fondo negro para toda la página */
+  overflow-x: hidden; /* Evita que la página se desplace horizontalmente */
+  margin: 0; /* Elimina los márgenes predeterminados del navegador */
+  padding: 0; /* Elimina el relleno predeterminado del navegador */
 }
 
 /* NAVBAR PRINCIPAL */
 .navBar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 80px;
-  background-color: rgba(0, 0, 0, 0.8); /* Fondo con opacidad */
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  position: fixed; /* Fija la barra de navegación en la parte superior */
+  top: 0; /* Asegura que esté en la parte superior de la pantalla */
+  left: 0; /* Alinea a la izquierda */
+  width: 100%; /* Ocupa todo el ancho de la pantalla */
+  height: 80px; /* Altura fija de la barra de navegación */
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro con transparencia */
+  z-index: 10; /* Asegura que esté por encima de otros elementos */
+  display: flex; /* Usa Flexbox para alinear elementos internos */
+  align-items: center; /* Centra verticalmente los elementos */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Agrega una sombra para dar profundidad */
 }
 
 /* CONTENEDOR DEL NAVBAR */
 .navBar_contenedor {
-  width: 100%;
-  padding: 0 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
+  width: 100%; /* Ocupa todo el ancho disponible */
+  padding: 0 20px; /* Añade un espacio interno a los lados */
+  display: flex; /* Usa Flexbox para organizar elementos */
+  align-items: center; /* Centra verticalmente los elementos */
+  justify-content: space-between; /* Distribuye el espacio entre los elementos */
+  position: relative; /* Permite posicionar elementos absolutos dentro */
 }
 
 /* LOGO */
 .nav_logo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  position: absolute; /* Posiciona el logo de forma absoluta */
+  left: 50%; /* Lo centra horizontalmente */
+  transform: translateX(-50%); /* Ajusta el centro exacto */
 }
 .nav_logo img {
-  height: 80px;
+  height: 80px; /* Tamaño fijo del logo */
 }
 
 /* Botón hamburguesa animado */
 .burger {
-  position: relative;
-  width: 30px;
-  height: 25px;
-  background: transparent;
-  cursor: pointer;
-  display: block;
-  z-index: 11;
+  position: relative; /* Posiciona el botón dentro del navbar */
+  width: 30px; /* Ancho del botón */
+  height: 25px; /* Alto del botón */
+  background: transparent; /* Sin fondo visible */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  display: block; /* Hace visible el botón */
+  z-index: 11; /* Asegura que esté por encima de otros elementos */
 }
 
 .burger input {
-  display: none;
+  display: none; /* Oculta el checkbox del botón hamburguesa */
 }
 
 .burger span {
-  display: block;
-  position: absolute;
-  height: 4px;
-  width: 100%;
-  background: white;
-  border-radius: 9px;
-  transition: 0.25s ease-in-out;
+  display: block; /* Muestra las líneas del botón */
+  position: absolute; /* Posiciona las líneas */
+  height: 4px; /* Grosor de las líneas */
+  width: 100%; /* Ancho de las líneas */
+  background: white; /* Color blanco para las líneas */
+  border-radius: 9px; /* Bordes redondeados */
+  transition: 0.25s ease-in-out; /* Animación suave al cambiar de estado */
 }
 
 /* Posición inicial de las líneas */
 .burger span:nth-of-type(1) {
-  top: 0;
+  top: 0; /* Primera línea en la parte superior */
 }
 
 .burger span:nth-of-type(2) {
-  top: 50%;
-  transform: translateY(-50%);
+  top: 50%; /* Segunda línea en el centro */
+  transform: translateY(-50%); /* Ajusta el centro exacto */
 }
 
 .burger span:nth-of-type(3) {
-  bottom: 0;
+  bottom: 0; /* Tercera línea en la parte inferior */
 }
 
 /* Efecto de "X" cuando el menú está activo */
 .burger input:checked ~ span:nth-of-type(1) {
-  transform: rotate(45deg);
-  top: 50%;
+  transform: rotate(45deg); /* Rota la primera línea */
+  top: 50%; /* La mueve al centro */
 }
 
 .burger input:checked ~ span:nth-of-type(2) {
-  opacity: 0;
+  opacity: 0; /* Desvanece la segunda línea */
 }
 
 .burger input:checked ~ span:nth-of-type(3) {
-  transform: rotate(-45deg);
-  top: 50%;
+  transform: rotate(-45deg); /* Rota la tercera línea */
+  top: 50%; /* La mueve al centro */
 }
 
 /* Estilos del menú */
 .nav_list {
-  position: fixed;
-  top: 0;
-  left: -250px;
-  width: 250px;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  list-style: none;
-  padding-top: 80px;
-  transition: left 0.3s;
-  z-index: 10;
+  position: fixed; /* Fija el menú en la pantalla */
+  top: 0; /* Alinea en la parte superior */
+  left: -250px; /* Oculta el menú fuera de la pantalla */
+  width: 250px; /* Ancho del menú */
+  height: 100%; /* Ocupa toda la altura de la pantalla */
+  background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro con transparencia */
+  list-style: none; /* Elimina los estilos de lista predeterminados */
+  padding-top: 80px; /* Espacio desde la parte superior */
+  transition: left 0.3s; /* Transición suave al mostrar/ocultar */
+  z-index: 10; /* Asegura que esté por encima de otros elementos */
 }
 
 .nav_list.active {
-  left: 0;
+  left: 0; /* Muestra el menú moviéndolo hacia la izquierda */
 }
 
 .menu_overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: none;
-  z-index: 9;
+  position: fixed; /* Fija el overlay en la pantalla */
+  top: 0; /* Alinea en la parte superior */
+  left: 0; /* Alinea a la izquierda */
+  width: 100%; /* Ocupa todo el ancho */
+  height: 100%; /* Ocupa toda la altura */
+  background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+  display: none; /* Oculta el overlay inicialmente */
+  z-index: 9; /* Asegura que esté detrás del menú */
 }
 
 .menu_overlay.active {
-  display: block;
+  display: block; /* Muestra el overlay cuando está activo */
 }
 
 /* ELEMENTOS DEL MENÚ */
 .nav__li_item {
-  border-bottom: 1px solid #ffab00; /* Línea negra debajo de cada elemento */
+  border-bottom: 1px solid #ffab00; /* Línea debajo de cada elemento */
   padding-bottom: 7px; /* Espaciado entre el texto y la línea */
-  padding-top: 5px;
-  width: 170px;
-  padding-left: 20px;
+  padding-top: 5px; /* Espaciado superior */
+  width: 170px; /* Ancho fijo */
+  padding-left: 20px; /* Espaciado izquierdo */
 }
 
 .nav__li_item a {
-  color: #fff;
-  text-decoration: none;
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 18px;
-  text-transform: uppercase;
-  padding: 10px;
-  transition: color 0.3s;
+  color: #fff; /* Color blanco para el texto */
+  text-decoration: none; /* Elimina el subrayado */
+  font-family: "Bebas Neue", sans-serif; /* Fuente personalizada */
+  font-size: 18px; /* Tamaño del texto */
+  text-transform: uppercase; /* Texto en mayúsculas */
+  padding: 10px; /* Espaciado interno */
+  transition: color 0.3s; /* Animación suave al cambiar de color */
 }
 
 /* EFECTO AL PASAR EL CURSOR */
 .nav__li_item a:hover {
-  color: #ffab00;
+  color: #ffab00; /* Cambia el color al pasar el mouse */
 }
 
-/*   inicio   */
+/* INICIO DE LA PÁGINA */
 .Inicio_pagina {
-  background: url("imgs/plano_ciudad.jpg") no-repeat center center;
-  background-size: 1550px 800px; /* Tamaño fijo */
-  height: 100vh;
+  background: url("imgs/plano_ciudad.jpg") no-repeat center center; /* Imagen de fondo centrada */
+  background-size: 1550px 800px; /* Tamaño fijo de la imagen */
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
 }
 
 .inicio_pagina_contenido {
-  height: 100%;
-  max-width: unset;
+  height: 100%; /* Ocupa toda la altura */
+  max-width: unset; /* Sin ancho máximo */
 }
 
 .inicio_pagina_contenido_inner {
-  height: 100%;
-  padding-top: 185px;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  z-index: 3;
+  height: 100%; /* Ocupa toda la altura */
+  padding-top: 185px; /* Espaciado desde la parte superior */
+  display: flex; /* Usa Flexbox para organizar elementos */
+  flex-direction: column; /* Organiza los elementos en columna */
+  position: relative; /* Permite posicionar elementos absolutos dentro */
+  z-index: 3; /* Asegura que esté por encima de otros elementos */
 }
 
 .inicio_pagina_contenido_info {
-  box-sizing: border-box;
+  box-sizing: border-box; /* Incluye el padding en el cálculo del tamaño */
   text-align: center; /* Centra el contenido interno */
-  z-index: 2;
+  z-index: 2; /* Asegura que esté por encima de otros elementos */
 }
 
 .inicio_pagina_titulo {
-  max-width: 600px;
-  width: 100%;
+  max-width: 600px; /* Ancho máximo del título */
+  width: 100%; /* Ocupa todo el ancho disponible */
 }
 
 .inicio_pagina_titulo img {
@@ -189,86 +190,86 @@ body {
 }
 
 .page-header__description_1 {
-  font-family: "Tahoma", sans-serif;
-  color: white;
-  font-size: 16px;
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 0px;
-  max-width: 600px;
+  font-family: "Tahoma", sans-serif; /* Fuente personalizada */
+  color: white; /* Color blanco */
+  font-size: 16px; /* Tamaño del texto */
+  text-align: center; /* Centra el texto */
+  margin-top: 10px; /* Espaciado superior */
+  margin-bottom: 0px; /* Sin espaciado inferior */
+  max-width: 600px; /* Ancho máximo */
 }
 
 .page-header__description_2 {
-  font-family: "BlackOpsOne", sans-serif;
-  color: white;
-  font-size: 18px;
-  text-align: center;
-  margin-top: 0px;
-  margin-bottom: 10px;
-  max-width: 600px;
+  font-family: "BlackOpsOne", sans-serif; /* Fuente personalizada */
+  color: white; /* Color blanco */
+  font-size: 18px; /* Tamaño del texto */
+  text-align: center; /* Centra el texto */
+  margin-top: 0px; /* Sin espaciado superior */
+  margin-bottom: 10px; /* Espaciado inferior */
+  max-width: 600px; /* Ancho máximo */
 }
 
 .inicio_pagina_botones {
-  display: flex;
+  display: flex; /* Usa Flexbox para organizar elementos */
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
   text-align: center; /* Asegura que el contenido se centre si es inline */
-  max-width: 600px;
+  max-width: 600px; /* Ancho máximo */
 }
 
 .inicio_pagina_botones .t_btn {
-  font-size: 18px;
-  max-width: 250px;
-  padding-inline: 20px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: black;
-  position: relative;
-  border: none;
-  overflow: hidden;
-  color: #ffab00;
+  font-size: 18px; /* Tamaño del texto */
+  max-width: 250px; /* Ancho máximo */
+  padding-inline: 20px; /* Espaciado horizontal */
+  width: 100%; /* Ocupa todo el ancho disponible */
+  display: flex; /* Usa Flexbox para organizar elementos */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  background-color: black; /* Fondo negro */
+  position: relative; /* Permite posicionar elementos absolutos dentro */
+  border: none; /* Sin bordes */
+  overflow: hidden; /* Oculta el contenido que sobresale */
+  color: #ffab00; /* Color del texto */
 }
 
 /* Estilos base del botón */
 .t_btn {
-  font-family: "LastDays", sans-serif;
-  font-weight: 500px;
-  font-size: 17px;
-  line-height: 28px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  padding: 14px 70px;
-  cursor: pointer;
-  display: inline-block;
-  text-align: center;
-  transition: color 0.3s, background-color 0.3s;
+  font-family: "LastDays", sans-serif; /* Fuente personalizada */
+  font-weight: 500px; /* Peso de la fuente */
+  font-size: 17px; /* Tamaño del texto */
+  line-height: 28px; /* Altura de línea */
+  text-transform: uppercase; /* Texto en mayúsculas */
+  letter-spacing: 1px; /* Espaciado entre letras */
+  padding: 14px 70px; /* Espaciado interno */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  display: inline-block; /* Hace que el botón sea un bloque independiente */
+  text-align: center; /* Centra el texto */
+  transition: color 0.3s, background-color 0.3s; /* Animación suave */
 }
 
 /* Borde con SVG transparente */
 .btn--fancy {
-  position: relative;
+  position: relative; /* Permite posicionar elementos absolutos dentro */
 }
 
 /* Borde SVG que adopta el color del fondo */
 .btn--fancy::before {
-  content: "";
-  position: absolute;
+  content: ""; /* Contenido vacío */
+  position: absolute; /* Posiciona el borde */
   inset: 0; /* Ajusta el tamaño al botón */
-  background-image: url("imgs/mega1.svg");
-  background-repeat: no-repeat;
+  background-image: url("imgs/mega1.svg"); /* Imagen del borde */
+  background-repeat: no-repeat; /* Sin repetición */
   background-size: contain; /* Ajusta el tamaño del borde */
-  background-position: center;
-  -webkit-mask-image: url("imgs/mega1.svg");
-  mask-image: url("imgs/mega1.svg");
-  background-color: #ffab00; /* Aplica el color */
+  background-position: center; /* Centra el borde */
+  -webkit-mask-image: url("imgs/mega1.svg"); /* Aplica una máscara */
+  mask-image: url("imgs/mega1.svg"); /* Aplica una máscara */
+  background-color: #ffab00; /* Color del borde */
 }
 
 /* Efecto Hover */
 .t_btn:hover {
-  color: white !important; /* Hace el texto blanco */
-  background-color: transparent;
+  color: white !important; /* Cambia el color del texto */
+  background-color: transparent; /* Fondo transparente */
 }
 
 .btn--fancy:hover::before {
@@ -277,55 +278,55 @@ body {
 
 /* Fondo del botón con textura */
 .btn--fancy-gold {
-  background: url("imgs/textura-hormigon-oscuro.avif") center / cover no-repeat;
+  background: url("imgs/textura-hormigon-oscuro.avif") center / cover no-repeat; /* Textura de fondo */
 }
 
 .btn--fancy-gold:hover {
-  color: white;
-  background-clip: border-box;
+  color: white; /* Cambia el color del texto */
+  background-clip: border-box; /* Recorta el fondo al borde */
 }
 
 /* Ajustes generales */
 a {
-  transition: 0.3s;
+  transition: 0.3s; /* Animación suave para los enlaces */
 }
 
 a,
 button {
-  cursor: pointer;
+  cursor: pointer; /* Cambia el cursor al pasar sobre los enlaces y botones */
 }
 
 *,
 ::after,
 ::before {
-  box-sizing: border-box;
+  box-sizing: border-box; /* Incluye el padding en el cálculo del tamaño */
 }
 
 /* Medias queries optimizadas */
 @media only screen and (max-width: 1920px) {
   .inicio_pagina_botones .t_btn {
-    margin-top: 20px;
-    max-width: 251px;
+    margin-top: 20px; /* Espaciado superior */
+    max-width: 251px; /* Ancho máximo */
   }
 }
 
 @media only screen and (max-width: 1299px) {
   .inicio_pagina_botones .t_btn {
-    font-size: 16px;
-    max-width: 195px;
+    font-size: 16px; /* Tamaño del texto */
+    max-width: 195px; /* Ancho máximo */
   }
 }
 
 @media only screen and (max-width: 1024px) {
   .inicio_pagina_botones .t_btn {
-    font-size: 18px;
-    max-width: 250px;
+    font-size: 18px; /* Tamaño del texto */
+    max-width: 250px; /* Ancho máximo */
   }
 }
 
 @font-face {
-  font-family: "Tahoma";
-  src: url("fonts/tahoma.ttf") format("truetype");
+  font-family: "Tahoma"; /* Define la fuente Tahoma */
+  src: url("fonts/tahoma.ttf") format("truetype"); /* Ruta de la fuente */
 }
 
 .Img_sobresalinete {
@@ -333,251 +334,275 @@ button {
   top: 0; /* Se va al inicio de la pantalla */
   right: 0; /* Se alinea a la derecha */
   z-index: 9999; /* Se asegura de que esté por encima de todo */
-  display: flex;
-  justify-content: flex-end; /* Asegura que la imagen se alinee al final del contenedor */
+  display: flex; /* Usa Flexbox para organizar elementos */
+  justify-content: flex-end; /* Asegura que la imagen se alinee al final */
 }
 
 .Img_sobresalinete img {
   height: 100vh; /* Ocupa toda la altura de la pantalla */
 }
 /*---------------------------------------------*/
-/*  sidebar  */
+/* ========== Sidebar flotante ========== */
 .sidebar {
-  position: fixed;
-  top: 50%;
+  position: fixed; /* Fija la posición en la pantalla */
+  top: 50%; /* Centra verticalmente en la pantalla */
   right: -80px; /* Inicialmente oculta fuera de la pantalla */
-  transform: translateY(-50%);
-  background-color: #000;
-  color: #fff;
-  padding: 10px;
-  border-radius: 5px 0 0 5px;
-  transition: right 0.3s ease; /* Transición suave */
-  width: 80px;
-  text-align: center;
-  z-index: 1000;
+  transform: translateY(-50%); /* Ajusta la posición verticalmente */
+  background-color: #000; /* Color de fondo negro */
+  color: #fff; /* Texto en color blanco */
+  padding: 10px; /* Espaciado interno */
+  border-radius: 5px 0 0 5px; /* Bordes redondeados en el lado izquierdo */
+  transition: right 0.3s ease; /* Transición suave para el desplazamiento */
+  width: 80px; /* Ancho del sidebar */
+  text-align: center; /* Centra el contenido */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
 }
 
-/* Pestaña de activación */
+/* ========== Pestaña de activación ========== */
 .tab {
-  position: absolute;
-  left: -30px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 30px;
-  height: 60px;
-  background-color: #ffab00;
-  color: white;
-  text-align: center;
-  line-height: 60px;
-  cursor: pointer;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  font-weight: bold;
+  position: absolute; /* Posicionamiento absoluto dentro de la sidebar */
+  left: -30px; /* Se coloca fuera del sidebar */
+  top: 50%; /* Centra verticalmente dentro de la sidebar */
+  transform: translateY(-50%); /* Ajusta la posición exacta */
+  width: 30px; /* Ancho de la pestaña */
+  height: 60px; /* Altura de la pestaña */
+  background-color: #ffab00; /* Color de fondo amarillo */
+  color: white; /* Texto en blanco */
+  text-align: center; /* Centra el texto */
+  line-height: 60px; /* Centra verticalmente el texto */
+  cursor: pointer; /* Indica que es interactivo */
+  border-top-left-radius: 5px; /* Redondea la esquina superior izquierda */
+  border-bottom-left-radius: 5px; /* Redondea la esquina inferior izquierda */
+  font-weight: bold; /* Texto en negrita */
 }
 
-/* Contenedor de íconos */
+/* ========== Contenedor de íconos dentro de la sidebar ========== */
 .sticky-sidebar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Botón rojo */
-.sticky-sidebar h2 {
-  background-color: #ffab00;
-  padding: 10px;
-  margin-bottom: 10px;
-  font-size: 16px;
-}
-
-/* Íconos */
-.sticky-sidebar img {
-  width: 40px;
-  margin: 5px 0;
-  transition: transform 0.3s ease; /* Efecto de movimiento */
-}
-
-/* Efecto hover en los íconos */
-.sticky-sidebar img:hover {
-  transform: scale(1.2); /* Aumenta el tamaño del ícono */
-}
-
-/* Mostrar la sidebar cuando se pasa el mouse */
-.sidebar:hover {
-  right: 0;
-}
-/*---------------------------------------------*/
-/*  sinopsis  */
-.Sinopsis_seccion {
-  height: 100vh;
-  background: url(imgs/fondo_sinopsis.jpg) no-repeat center center fixed;
   display: flex; /* Usa flexbox */
-  justify-content: space-between; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente si es necesario */
+  flex-direction: column; /* Organiza los elementos en columna */
+  align-items: center; /* Centra los elementos horizontalmente */
 }
 
+/* ========== Botón de encabezado ========== */
+.sticky-sidebar h2 {
+  background-color: #ffab00; /* Color de fondo amarillo */
+  padding: 10px; /* Espaciado interno */
+  margin-bottom: 10px; /* Margen inferior */
+  font-size: 16px; /* Tamaño del texto */
+}
+
+/* ========== Íconos dentro de la sidebar ========== */
+.sticky-sidebar img {
+  width: 40px; /* Tamaño de los íconos */
+  margin: 5px 0; /* Espaciado entre íconos */
+  transition: transform 0.3s ease; /* Efecto de animación */
+}
+
+/* ========== Efecto hover en los íconos ========== */
+.sticky-sidebar img:hover {
+  transform: scale(1.2); /* Aumenta el tamaño del ícono al pasar el mouse */
+}
+
+/* ========== Mostrar la sidebar cuando se pasa el mouse ========== */
+.sidebar:hover {
+  right: 0; /* Mueve la sidebar hacia la pantalla */
+}
+
+/* =========================================== */
+/* ========== Sección de Sinopsis ========== */
+/* =========================================== */
+.Sinopsis_seccion {
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  background: url(imgs/fondo_sinopsis.jpg) no-repeat center center fixed; /* Imagen de fondo fija */
+  display: flex; /* Usa flexbox */
+  justify-content: space-between; /* Distribuye los elementos horizontalmente */
+  align-items: center; /* Centra verticalmente los elementos */
+}
+
+/* ========== Contenedor de la sinopsis ========== */
 .contenedor_sinopsis {
-  background: url(imgs/prueba4.webp) no-repeat center center;
-  width: 800px;
-  display: flex;
-  flex-direction: column; /* Asegura que los elementos internos se apilen verticalmente */
+  background: url(imgs/prueba4.webp) no-repeat center center; /* Imagen de fondo */
+  width: 800px; /* Ancho del contenedor */
+  display: flex; /* Usa flexbox */
+  flex-direction: column; /* Organiza los elementos en columna */
   align-items: center; /* Centra el contenido horizontalmente */
-  padding: 20px;
-  margin: 0 200px;
+  padding: 20px; /* Espaciado interno */
+  margin: 0 200px; /* Margen lateral */
 }
 
+/* ========== Contenido de la sinopsis ========== */
 .Sinopsis_content {
-  width: 600px;
-  text-align: justify;
-  display: flex;
+  width: 600px; /* Ancho del contenido */
+  text-align: justify; /* Justifica el texto */
+  display: flex; /* Usa flexbox */
   flex-direction: column; /* Organiza los textos en columna */
-  align-items: center; /* Centra horizontalmente el texto */
+  align-items: center; /* Centra el contenido horizontalmente */
 }
 
+/* ========== Fuentes personalizadas ========== */
 @font-face {
   font-family: "28DaysLater";
-  src: url("fonts/28\ Days\ Later.ttf") format("truetype");
+  src: url("fonts/28\ Days\ Later.ttf") format("truetype"); /* Fuente personalizada */
 }
 
 @font-face {
   font-family: "LastDays";
-  src: url("fonts/Last\ Days.ttf") format("truetype");
+  src: url("fonts/Last\ Days.ttf") format("truetype"); /* Fuente personalizada */
 }
 
 @font-face {
   font-family: "BlackOpsOne";
-  src: url("fonts/BlackOpsOne-Regular.ttf") format("truetype");
+  src: url("fonts/BlackOpsOne-Regular.ttf") format("truetype"); /* Fuente personalizada */
 }
 
+/* ========== Título de la sinopsis ========== */
 .titulo_sinopsis {
-  font-family: "28DaysLater", sans-serif;
-  font-size: 38px; /* Ajusta el tamaño según necesites */
-  line-height: 20px;
-  padding-bottom: 10px;
-  --color: #fff; /* Cambia el color si lo necesitas */
+  font-family: "28DaysLater", sans-serif; /* Fuente personalizada */
+  font-size: 38px; /* Tamaño del texto */
+  line-height: 20px; /* Espaciado entre líneas */
+  padding-bottom: 10px; /* Espaciado inferior */
+  --color: #fff; /* Color del texto */
 }
 
+/* ========== Textos de la sinopsis ========== */
 .texto_sinopsis1,
 .texto_sinopsis2,
 .texto_sinopsis3 {
-  font-family: "28DaysLater", sans-serif;
-  font-size: 20px;
-  line-height: 20px;
-  color: #000000; /* Cambia el color aquí (ejemplo: blanco) */
+  font-family: "28DaysLater", sans-serif; /* Fuente personalizada */
+  font-size: 20px; /* Tamaño del texto */
+  line-height: 20px; /* Espaciado entre líneas */
+  color: #000000; /* Color del texto */
 }
 
+/* ========== Imagen de la sinopsis ========== */
 .Sinopisis_imagen {
-  position: absolute; /* Se coloca sobre el contenido */
-  right: 0; /* Se alinea a la derecha */
-  z-index: 2; /* Se asegura de que esté por encima de todo */
-  display: flex;
-  justify-content: flex-end; /* Asegura que la imagen se alinee al final del contenedor */
+  position: absolute; /* Posicionamiento absoluto */
+  right: 0; /* Alineado a la derecha */
+  z-index: 2; /* Asegura que esté por encima del contenido */
+  display: flex; /* Usa flexbox */
+  justify-content: flex-end; /* Alinea la imagen al final del contenedor */
 }
 
 .Sinopisis_imagen img {
-  padding-right: 60px;
+  padding-right: 60px; /* Espaciado derecho */
   height: 100vh; /* Ocupa toda la altura de la pantalla */
 }
+
 /*---------------------------------------------*/
 /*  carrusel  */
 
 /*---------------------------------------------*/
 
-/* Contenedor */
+/* Contenedor del video */
 .contenedor-video {
-  position: relative;
-  width: auto; /* Ocupa todo el ancho de la pantalla */
-  height: 100vh; /* Ocupa todo el alto de la pantalla */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: transparent;
-  overflow: hidden;
+  position: relative; /* Permite posicionar elementos hijos de manera absoluta */
+  width: auto; /* Se ajusta al ancho de la pantalla */
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  display: flex; /* Usa flexbox para centrar el contenido */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  background-color: transparent; /* Fondo transparente */
+  overflow: hidden; /* Oculta cualquier desbordamiento */
 }
 
+/* Estilo del video */
 .video {
-  width: 1210px;
-  height: 550px;
-  object-fit: cover; /* Asegura que el video cubra toda la pantalla sin deformarse */
-  margin-top: 90px;
+  width: 1210px; /* Ancho fijo del video */
+  height: 550px; /* Altura fija del video */
+  object-fit: cover; /* Ajusta el video para cubrir sin deformarse */
+  margin-top: 90px; /* Espaciado superior */
 }
 
+/* Marco superior del video */
 .marco {
-  position: absolute;
+  position: absolute; /* Se coloca en la parte superior del contenedor */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 2;
-  pointer-events: none;
+  z-index: 2; /* Se posiciona sobre el video */
+  pointer-events: none; /* No interfiere con la interacción del usuario */
 }
 
 /*---------------------------------------------*/
 
-/*  Galeria  */
+/* Sección de la galería */
 .seccion_galeria {
-  background: #212529;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  max-width: 100vw;
-  justify-content: center;
+  background: #212529; /* Fondo oscuro */
+  display: flex; /* Usa flexbox */
+  flex-wrap: wrap; /* Permite que los elementos se ajusten a varias líneas */
+  gap: 10px; /* Espacio entre los elementos */
+  max-width: 100vw; /* Ocupa todo el ancho de la ventana */
+  justify-content: center; /* Centra los elementos */
   padding-top: 20px;
   padding-bottom: 20px;
 }
+
+/* Contenedor de la galería */
 .contenerdor_galeria {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 25px;
-  justify-content: center;
+  display: flex; /* Usa flexbox */
+  flex-wrap: wrap; /* Permite ajuste en múltiples líneas */
+  gap: 25px; /* Espacio entre los elementos */
+  justify-content: center; /* Centra los elementos */
 }
+
+/* Elementos de la galería */
 .contenerdor_galeria div {
-  background: url(imgs/textura-hormigon-oscuro.avif) no-repeat center center;
-  width: 500px;
-  height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s ease-in-out;
+  background: url(imgs/textura-hormigon-oscuro.avif) no-repeat center center; /* Fondo con textura */
+  width: 500px; /* Ancho fijo */
+  height: 300px; /* Altura fija */
+  display: flex; /* Usa flexbox */
+  justify-content: center; /* Centra el contenido */
+  align-items: center; /* Centra el contenido */
+  text-align: center; /* Centra el texto */
+  color: white; /* Texto en color blanco */
+  font-weight: bold; /* Texto en negrita */
+  cursor: pointer; /* Muestra el cursor en forma de mano */
+  position: relative; /* Permite la posición absoluta de los hijos */
+  overflow: hidden; /* Oculta cualquier desbordamiento */
+  transition: transform 0.3s ease-in-out; /* Suaviza la transformación */
 }
+
+/* Imágenes dentro de la galería */
 .contenerdor_galeria div img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  display: none;
-  position: absolute;
+  object-fit: contain; /* Ajusta la imagen sin recortar */
+  display: none; /* Oculta la imagen por defecto */
+  position: absolute; /* Se posiciona sobre el fondo */
   transition: opacity 0.8s ease-in, transform 0.8s ease-in;
-  transform: scale(0.8);
+  transform: scale(0.8); /* Inicialmente más pequeña */
 }
+
+/* Texto dentro de la galería */
 .contenerdor_galeria div span {
   transition: opacity 0.3s ease-out, transform 0.3s ease-out;
 }
+
+/* Efecto al pasar el mouse */
 .contenerdor_galeria div:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
 }
+
 .contenerdor_galeria div:hover span {
-  opacity: 0;
-  transform: translateY(-20px);
+  opacity: 0; /* Oculta el texto */
+  transform: translateY(-20px); /* Lo mueve hacia arriba */
 }
+
 .contenerdor_galeria div:hover img {
-  display: block;
-  opacity: 1;
-  transform: scale(1);
+  display: block; /* Muestra la imagen */
+  opacity: 1; /* La hace visible */
+  transform: scale(1); /* La devuelve a su tamaño normal */
 }
 
 /*---------------------------------------------*/
-/*  Formulario */
+/* Estilos del formulario */
 
-/* Modo día - Texto blanco en el formulario */
+/* Texto blanco en el formulario en modo día */
 .reporte-form {
-  color: #fff; /* Texto blanco por defecto (modo día) */
+  color: #fff;
 }
+
 /* Modo noche */
 .noche {
   background-color: #121212; /* Fondo oscuro */
@@ -587,125 +612,146 @@ button {
 /* Sección del formulario */
 .seccion-formulario {
   padding: 40px 0;
-  background: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
+  background: rgba(0, 0, 0, 0.8); /* Fondo oscuro semitransparente */
 }
 
 /* Contenedor del formulario */
 .reporte-form {
-  background: rgba(0, 0, 0, 0.7);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(255, 69, 0, 0.8);
-  border: 2px solid rgba(255, 69, 0, 0.8);
-  backdrop-filter: blur(5px);
-  max-width: 500px;
-  margin: auto;
+  background: rgba(0, 0, 0, 0.7); /* Fondo oscuro */
+  padding: 20px; /* Espaciado interno */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 0 10px rgba(255, 69, 0, 0.8); /* Sombra de color naranja */
+  border: 2px solid rgba(255, 69, 0, 0.8); /* Borde naranja */
+  backdrop-filter: blur(5px); /* Difuminado */
+  max-width: 500px; /* Ancho máximo */
+  margin: auto; /* Centra el formulario */
 }
 
 /* Título del formulario */
 .reporte-form h2 {
   text-align: center;
-  font-family: "BlackOpsOne", sans-serif;
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-family: "BlackOpsOne", sans-serif; /* Fuente personalizada */
+  font-size: 24px; /* Tamaño del texto */
+  margin-bottom: 20px; /* Espaciado inferior */
 }
 
-/* Inputs y select */
+/* Campos de entrada */
 .reporte-form input,
 .reporte-form select,
 .reporte-form textarea {
-  background-color: rgba(255, 255, 255, 0.815);
-  border: none;
-  border-radius: 5px;
-  color: #000000;
-  padding: 10px;
-  width: 100%;
-  margin-bottom: 15px;
-  transition: background-color 0.3s;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.815
+  ); /* Fondo blanco semitransparente */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  color: #000000; /* Texto negro */
+  padding: 10px; /* Espaciado interno */
+  width: 100%; /* Ocupa todo el ancho */
+  margin-bottom: 15px; /* Espaciado inferior */
+  transition: background-color 0.3s; /* Efecto de transición */
 }
 
-/* Efecto hover en inputs */
+/* Efecto al enfocar un campo */
 .reporte-form input:focus,
 .reporte-form select:focus,
 .reporte-form textarea:focus {
-  background-color: rgba(245, 221, 221, 0.336);
-  outline: none;
+  background-color: rgba(245, 221, 221, 0.336); /* Color de fondo al enfocar */
+  outline: none; /* Elimina el borde predeterminado */
 }
 
 /* Botón de envío */
 .reporte-form button {
-  background: linear-gradient(45deg, #a92719 50%, #7e1c12 50%);
-  color: #fff;
-  padding: 10px;
-  font-size: 18px;
-  text-transform: uppercase;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s;
+  background: linear-gradient(
+    45deg,
+    #a92719 50%,
+    #7e1c12 50%
+  ); /* Degradado de colores */
+  color: #fff; /* Texto blanco */
+  padding: 10px; /* Espaciado interno */
+  font-size: 18px; /* Tamaño del texto */
+  text-transform: uppercase; /* Texto en mayúsculas */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cursor en forma de mano */
+  transition: background 0.3s; /* Efecto de transición */
 }
 
-/* Efecto hover en el botón */
+/* Efecto hover en el botón de formulario de reporte */
 .reporte-form button:hover {
-  background: linear-gradient(45deg, #b70000 50%, #9e0000 50%);
+  background: linear-gradient(
+    45deg,
+    #b70000 50%,
+    /* Rojo oscuro en la mitad superior */ #9e0000 50%
+      /* Rojo más oscuro en la mitad inferior */
+  ); /* Cambio de degradado al pasar el cursor */
 }
 
-/* Botón de modo día/noche */
+/* Botón de alternancia de modo día/noche */
 .modo-toggle .btn {
-  font-size: 16px;
-  padding: 10px 20px;
-  border-radius: 5px;
-  transition: background 0.3s, color 0.3s;
+  font-size: 16px; /* Tamaño de fuente del botón */
+  padding: 10px 20px; /* Espaciado interno del botón */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background 0.3s, color 0.3s; /* Transición suave de color y fondo */
 }
 
-/* Responsive design */
+/* Diseño responsivo para pantallas menores a 768px */
 @media (max-width: 768px) {
   .reporte-form {
-    padding: 15px;
+    padding: 15px; /* Reduce el espaciado del formulario */
   }
 
   .reporte-form h2 {
-    font-size: 20px;
+    font-size: 20px; /* Reduce el tamaño del título */
   }
 
   .reporte-form input,
   .reporte-form select,
   .reporte-form textarea {
-    font-size: 14px;
-    padding: 8px;
+    font-size: 14px; /* Ajusta el tamaño del texto */
+    padding: 8px; /* Ajusta el espaciado interno de los campos */
   }
 }
+
 /*---------------------------------------------*/
-/* estilos para el slider de plataformas */
+/* Estilos para el slider de plataformas */
 .slider {
-  width: 75vw;
-  height: auto;
-  margin: auto;
-  overflow: hidden;
+  width: 75vw; /* Ancho del slider en 75% del viewport */
+  height: auto; /* Altura automática */
+  margin: auto; /* Centra el slider horizontalmente */
+  overflow: hidden; /* Oculta elementos que desborden el contenedor */
 }
 
+/* Contenedor de las diapositivas dentro del slider */
 .slider .slide-track {
-  display: flex;
-  animation: scroll 40s linear infinite;
-  -webkit-animation: scroll 40s linear infinite;
-  width: calc(200px * 14);
-  background-color: #ffffff;
+  display: flex; /* Usa flexbox para alinear elementos en fila */
+  animation: scroll 40s linear infinite; /* Animación continua */
+  -webkit-animation: scroll 40s linear infinite; /* Compatibilidad con navegadores antiguos */
+  width: calc(
+    200px * 14
+  ); /* Ajusta el ancho en función del número de elementos */
+  background-color: #ffffff; /* Fondo blanco */
 }
 
+/* Estilos individuales para cada diapositiva */
 .slider .slide {
-  width: 200px;
-  height: 150px; /* Establece una altura fija */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 200px; /* Ancho fijo para cada slide */
+  height: 150px; /* Altura fija para uniformidad */
+  display: flex; /* Usa flexbox para centrar contenido */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
 }
 
+/* Estilos de las imágenes dentro del slider */
 .slider .slide img {
-  max-width: 100%; /* Asegura que la imagen no sea más ancha que el contenedor */
-  max-height: 100%; /* Asegura que la imagen no sea más alta que el contenedor */
-  object-fit: cover; /* Ajusta la imagen para cubrir todo el espacio sin deformarse */
+  max-width: 100%; /* Evita que la imagen supere el ancho del contenedor */
+  max-height: 100%; /* Evita que la imagen supere la altura del contenedor */
+  object-fit: cover; /* Ajusta la imagen sin distorsionar */
 }
 
+/* Animación para el desplazamiento del slider */
 @keyframes scroll {
   0% {
     -webkit-transform: translateX(0);
@@ -716,47 +762,49 @@ button {
     transform: translateX(calc(-200px * 7));
   }
 }
+
 /*---------------------------------------------*/
-/* Estilo general del footer */
+/* Estilos generales para el footer */
 .footer {
-  background-color: #111; /* Negro oscuro */
-  color: #fff; /* Texto blanco */
-  padding: 20px 0; /* Espaciado interno */
+  background-color: #111; /* Fondo negro oscuro */
+  color: #fff; /* Texto en color blanco */
+  padding: 20px 0; /* Espaciado interno superior e inferior */
 }
 
-/* Estilo de los enlaces en el footer */
+/* Estilos de los enlaces en el footer */
 .footer-links a {
-  color: #fff; /* Color blanco inicial */
-  text-decoration: none; /* Sin subrayado */
+  color: #fff; /* Color inicial blanco */
+  text-decoration: none; /* Elimina subrayado */
   font-weight: bold; /* Negrita */
   font-size: 14px; /* Tamaño de fuente */
-  transition: color 0.3s; /* Transición suave */
+  transition: color 0.3s; /* Transición suave de color */
 }
 
-/* Cambio de color al pasar el mouse */
+/* Cambio de color al pasar el mouse sobre los enlaces */
 .footer-links a:hover {
-  color: #ffab00 !important; /* Rojo brillante */
+  color: #ffab00 !important; /* Color amarillo brillante */
 }
 
-/* Estilo para los enlaces en la parte inferior (términos y privacidad) */
+/* Estilos de los enlaces en la parte inferior del footer */
 .footer .small a {
   color: #bbb; /* Gris claro inicial */
   text-decoration: none; /* Sin subrayado */
-  transition: color 0.3s; /* Transición suave */
+  transition: color 0.3s; /* Transición suave de color */
 }
 
+/* Cambio de color al pasar el mouse en los enlaces inferiores */
 .footer .small a:hover {
-  color: #ffab00 !important; /* Rojo brillante al pasar el mouse */
+  color: #ffab00 !important; /* Amarillo brillante */
 }
 
-/* Separador horizontal */
+/* Estilos del separador horizontal en el footer */
 .footer hr {
-  border-color: #fff; /* Línea blanca */
-  margin: 15px 0; /* Espaciado */
+  border-color: #fff; /* Color de la línea blanca */
+  margin: 15px 0; /* Espaciado antes y después de la línea */
 }
 
-/* Imagen ESRB */
+/* Estilos de la imagen ESRB en el footer */
 .footer-right img {
-  max-width: 80px; /* Ancho máximo */
-  height: auto; /* Altura automática */
+  max-width: 80px; /* Ancho máximo de la imagen */
+  height: auto; /* Ajuste automático de altura */
 }
